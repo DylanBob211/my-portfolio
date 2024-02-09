@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Background from "./ui/background/Background";
+import Link from "./ui/link/Link";
 
 const inter = Roboto({ subsets: ['latin'], weight: '300', style: 'normal' });
 
@@ -18,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Background />
+        {/* <Background /> */}
         <div className="bg-transparent p-6 min-h-screen flex flex-col justify-end items-end">
           <header className="fixed top-0 left-0 p-6">
             <h1 className="text-3xl lg:text-5xl font-bold">Nicola D&apos;Oronzo</h1>
@@ -26,11 +27,11 @@ export default function RootLayout({
 
             <nav>
               <ul>
-                <li>About</li>
-                <li>Projects</li>
-                <li>Experiences</li>
-                <li>On My Bookshelf</li>
-                <li>Artworks</li>
+                <li><Link path="/">About</Link></li>
+                <li><Link path="/projects">Projects</Link></li>
+                <li><Link path="/experiences">Experiences</Link></li>
+                <li><Link path="/bookshelf">On my bookshelf</Link></li>
+                <li><Link path="/artworks">Artworks</Link></li>
               </ul>
             </nav>
           </header>
