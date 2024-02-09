@@ -3,7 +3,7 @@ import * as random from '../../helpers/random';
 
 const params = {
     levels: 3,
-    height: 200,
+    height: (height: number) => height / 3,
     width: 5,
     branchesAngleVariation: 40,
     sectionedBranching: true,
@@ -13,7 +13,7 @@ const params = {
 };
 
 const sceneParams = {
-    treesAmount: 20,
+    treesAmount: (width: number) => Math.floor(width / 100),
     mainBranchAngleVariation: 5,
     clearColor: { r: 200, g: 200, b: 200, a: .3 },
     randomTreeDistributionFactor: 50,
@@ -65,7 +65,7 @@ export class Tree {
         });
     }
 
-    static build(levels = params.levels, w = params.width, h = params.height): Tree {
+    static build(levels: number, w: number, h: number): Tree {
         const nodeCons = (width: number, height: number) => (subs: Tree[]) => new Tree(width, height, subs);
         if (levels <= 0) {
             return nodeCons(w, h)([]);
@@ -88,14 +88,15 @@ export class Tree {
     }
 
     static drawScene(context: CanvasRenderingContext2D, width: number, height: number) {
-        const t = Tree.build();
+        const t = Tree.build(params.levels, params.width, params.height(height));
 
         context.fillStyle = rgbaToString(sceneParams.clearColor);
         context.fillRect(0, 0, width, height);
         context.save();
         context.rotate(Math.PI);
-        for (let i = 0; i < sceneParams.treesAmount; i++) {
-            const segment = width / sceneParams.treesAmount;
+        const treesAmount = sceneParams.treesAmount(width);
+        for (let i = 0; i < treesAmount; i++) {
+            const segment = width / treesAmount;
             const offset = segment * sceneParams.randomTreeDistributionFactor / 100;
             context.save();
             context.translate(segment * -i + random.rangeFloor(-offset, offset), -height);

@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* <Background /> */}
+        <Background />
         <div className="bg-transparent p-6 min-h-screen flex flex-col justify-end items-end">
           <header className="fixed top-0 left-0 p-6">
             <h1 className="text-3xl lg:text-5xl font-bold">Nicola D&apos;Oronzo</h1>
