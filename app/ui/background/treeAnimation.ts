@@ -13,7 +13,7 @@ const params = {
 };
 
 const sceneParams = {
-    treesAmount: (width: number) => Math.floor(width / 100),
+    treesAmount: (width: number) => Math.floor(width / (100 * window.devicePixelRatio)),
     mainBranchAngleVariation: 5,
     clearColor: { r: 200, g: 200, b: 200, a: .3 },
     randomTreeDistributionFactor: 50,

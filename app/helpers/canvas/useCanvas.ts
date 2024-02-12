@@ -11,8 +11,11 @@ export function useCanvas(draw: (props: { context: CanvasRenderingContext2D, wid
         const context = canvasRef.current?.getContext('2d');
         const resizeFn = (_?: UIEvent) => {
             if (canvasRef.current && context) {
-                canvasRef.current.width = window.innerWidth
-                canvasRef.current.height = window.innerHeight;
+                const scale = window.devicePixelRatio;
+                canvasRef.current.style.width = `$${window.innerWidth}px`
+                canvasRef.current.style.height = `$${window.innerHeight}px`
+                canvasRef.current.width = Math.floor(window.innerWidth * scale);
+                canvasRef.current.height = Math.floor(window.innerHeight * scale);
             }
         }
         window.addEventListener('resize', resizeFn)
