@@ -13,7 +13,7 @@ async function seedExperiences(client) {
         id UUID DEFAULT uuid_generate_v4() PRIMARY KEY, 
         company VARCHAR(255) NOT NULL,
         description TEXT NOT NULL,
-        tasks VARCHAR(255)[] NOT NULL,
+        tasks TEXT[] NOT NULL,
         url VARCHAR(255),
         date DATE NOT NULL
       );`
