@@ -1,9 +1,26 @@
 import { Metadata } from "next"
+import { fetchAllProjects } from "../lib/data"
+import { Project } from "../lib/models";
 
 export const metadata: Metadata = {
     title: 'Projects'
 }
 
-export default function Projects() {
-    return <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae non omnis delectus eveniet aliquid maxime voluptatum! Fugiat explicabo quas quia! Quam numquam maiores aperiam consequuntur assumenda autem temporibus quae aut.</p>
+const ProjectItem = ({ title, description, stack}: Project) => (
+    <article>
+        <h3 className="text-lg">{title}</h3>
+        <p>{description}</p>
+        <ul>
+            {stack.map((item) => <li key={item}>{item}</li>)}
+        </ul>
+    </article>)
+
+export default async function Projects() {
+    const { rows: projects } = await fetchAllProjects();
+    return (
+        <>
+            {projects.map((project) => <ProjectItem key={project.id} {...project} />)}
+        </>
+
+    )
 }
