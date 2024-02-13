@@ -1,9 +1,23 @@
 import { Metadata } from "next"
+import { Artwork } from "../lib/models"
+import { fetchAllArtworks } from "../lib/data"
+import { Article } from "../ui/article"
 
 export const metadata: Metadata = {
     title: 'Artworks'
 }
 
-export default function Artworks() {
-    return <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae non omnis delectus eveniet aliquid maxime voluptatum! Fugiat explicabo quas quia! Quam numquam maiores aperiam consequuntur assumenda autem temporibus quae aut.</p>
+const ArtworkItem = ({ title, url, description }: Artwork) => (
+    <Article.Container>
+        <Article.Title><a href={url} target="_blank">{title}</a></Article.Title>
+        <Article.Paragraph>{description}</Article.Paragraph>
+    </Article.Container>
+)
+
+export default async function Artworks() {
+    const { rows: artworks } = await fetchAllArtworks();
+    return (
+        <>
+            {artworks.map((artwork) => <div key={artwork.id} className="mb-2"><ArtworkItem {...artwork} /></div>)}
+        </>)
 }

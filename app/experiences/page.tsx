@@ -1,9 +1,26 @@
-import { Metadata } from "next"
+import { Metadata } from "next";
+import { MMdashYYYY } from "../helpers/date";
+import { fetchAllExperiences } from "../lib/data";
+import { Experience } from "../lib/models";
+import { Article } from "../ui/article";
 
 export const metadata: Metadata = {
     title: 'Experiences'
 }
 
-export default function Experiences() {
-    return <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae non omnis delectus eveniet aliquid maxime voluptatum! Fugiat explicabo quas quia! Quam numquam maiores aperiam consequuntur assumenda autem temporibus quae aut.</p>
+const ExperienceItem = ({ company, date, description, tasks, url}: Experience) => (
+    <Article.Container>
+        <Article.Title>{ description }</Article.Title>
+        <Article.Subtitle><a target="_blank" href={url}>{ company }</a> { MMdashYYYY(date) }</Article.Subtitle>
+        <ul>
+            {tasks.map((task) => <li key={task}>{task}</li>)}
+        </ul>
+    </Article.Container>
+) 
+
+export default async function Experiences() {
+    const { rows: experiences } = await fetchAllExperiences(); 
+    return <>
+        {experiences.map((experience) => <div key={experience.id} className="mb-2"><ExperienceItem {...experience}/></div>)}
+    </>
 }

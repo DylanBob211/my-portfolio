@@ -3,25 +3,26 @@ import { fetchAllProjects } from "../lib/data"
 import { Project } from "../lib/models";
 import { Badge } from "../ui/badge";
 import { MMdashYYYY } from "../helpers/date";
-
+import { Article } from '../ui/article';
 export const metadata: Metadata = {
     title: 'Projects'
 }
 
 const ProjectItem = ({ title, description, stack, date }: Project) => (
-    <article>
-        <h3 className="text-2xl mb-2">{title} <br /><small className="text-xs">{MMdashYYYY(date)}</small></h3>
-        <p className="mb-2">{description}</p>
+    <Article.Container>
+        <Article.Title>{title} <br /><Article.HintText>{MMdashYYYY(date)}</Article.HintText></Article.Title>
+        <Article.Paragraph>{description}</Article.Paragraph>
         <div className="flex gap-1">
             {stack.map((item) => <Badge key={item}>{item}</Badge>)}
         </div>
-    </article>)
+    </Article.Container>
+)
 
 export default async function Projects() {
     const { rows: projects } = await fetchAllProjects();
     return (
         <>
-            {projects.map((project) => <ProjectItem key={project.id} {...project} />)}
+            {projects.map((project) => <div key={project.id} className="mb-3"><ProjectItem {...project} /></div>)}
         </>
 
     )

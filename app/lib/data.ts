@@ -28,7 +28,7 @@ export async function fetchAllExperiences() {
     }
 }
 
-export async function fetchAllBookshelf() {
+export async function fetchWholeBookshelf() {
     try {
         return (await sql<Book>`SELECT * from bookshelf`)
     } catch(e) {
