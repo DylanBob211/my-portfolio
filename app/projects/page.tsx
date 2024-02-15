@@ -12,7 +12,7 @@ const ProjectItem = ({ title, description, stack, date }: Project) => (
     <Article.Container>
         <Article.Title>{title} <br /><Article.HintText>{MMdashYYYY(date)}</Article.HintText></Article.Title>
         <Article.Paragraph>{description}</Article.Paragraph>
-        <div className="flex gap-1">
+        <div className="flex gap-1 flex-wrap">
             {stack.map((item) => <Badge key={item}>{item}</Badge>)}
         </div>
     </Article.Container>
