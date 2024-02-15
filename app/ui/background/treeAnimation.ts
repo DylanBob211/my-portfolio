@@ -1,7 +1,7 @@
 import { rgbaToString } from "../../helpers/colors";
 import * as random from '../../helpers/random';
 
-const params = {
+const treeParams = {
     levels: 3,
     height: (height: number) => height / 3,
     width: 5,
@@ -9,15 +9,44 @@ const params = {
     sectionedBranching: true,
     branchSections: 3,
     grassEffect: true,
-    treeColor: { r: 20, g: 20, b: 20, a: .5 },
+    color: { r: 20, g: 20, b: 20, a: .5 },
+    mainBranchAngleVariation: 5,
 };
 
 const sceneParams = {
     treesAmount: (width: number) => Math.floor(width / (100 * window.devicePixelRatio)),
-    mainBranchAngleVariation: 5,
-    clearColor: { r: 200, g: 200, b: 200, a: .3 },
+    clearColor: { r: 200, g: 200, b: 200, a: .03 },
     randomTreeDistributionFactor: 50,
-    depth: 10
+    depth: 10,
+    treeDrawingFrameRate: 100,
+    treeDrawingFrameRateStutter: 50,
+}
+
+type RGBA = { r: number, g: number, b: number, a: number };
+
+export interface AnimationSettings {
+    width: number;
+    height: number;
+    frameCount: number;
+    sceneParams: {
+        treesAmount: (w: number) => number,
+        clearColor: RGBA,
+        randomTreeDistributionFactor: number,
+        depth: number,
+        treeDrawingFrameRate: number,
+        treeDrawingFrameRateStutter: number
+    },
+    treeParams: {
+        levels: number,
+        height: (height: number) => number,
+        width: number,
+        branchesAngleVariation: number,
+        sectionedBranching: boolean,
+        branchSections: number,
+        grassEffect: boolean,
+        color: RGBA,
+        mainBranchAngleVariation: number,
+    }
 }
 
 export class Tree {
@@ -25,12 +54,12 @@ export class Tree {
 
     }
 
-    drawBranch(context: CanvasRenderingContext2D) {
-        context.fillStyle = rgbaToString(params.treeColor);
-        context.strokeStyle = rgbaToString(params.treeColor);
-        if (params.sectionedBranching) {
+    drawBranch(context: CanvasRenderingContext2D, treeParams: AnimationSettings['treeParams']) {
+        context.fillStyle = rgbaToString(treeParams.color);
+        context.strokeStyle = rgbaToString(treeParams.color);
+        if (treeParams.sectionedBranching) {
             context.beginPath();
-            const nodes = params.branchSections;
+            const nodes = treeParams.branchSections;
 
             for (let i = 0; i < nodes; i++) {
                 context.save();
@@ -47,25 +76,25 @@ export class Tree {
         }
     }
 
-    static draw(tree: Tree, context: CanvasRenderingContext2D) {
-        tree.drawBranch(context);
+    static draw(tree: Tree, context: CanvasRenderingContext2D, treeParams: AnimationSettings['treeParams']) {
+        tree.drawBranch(context, treeParams);
         tree.subtrees.forEach((subtree) => {
             context.save();
             context.translate(0, tree.h - random.range(0, tree.h / 4));
             context.rotate(
                 (random.rangeFloor(
-                    -params.branchesAngleVariation,
-                    params.branchesAngleVariation
+                    -treeParams.branchesAngleVariation,
+                    treeParams.branchesAngleVariation
                 ) *
                     Math.PI) /
                 180
             );
-            Tree.draw(subtree, context);
+            Tree.draw(subtree, context, treeParams);
             context.restore();
         });
     }
 
-    static build(levels: number, w: number, h: number): Tree {
+    static build(levels: number, w: number, h: number, treeParams: AnimationSettings['treeParams']): Tree {
         const nodeCons = (width: number, height: number) => (subs: Tree[]) => new Tree(width, height, subs);
         if (levels <= 0) {
             return nodeCons(w, h)([]);
@@ -78,23 +107,30 @@ export class Tree {
                     Tree.build(
                         levels - 1,
                         w * (levels / (levels + 1 + j)),
-                        params.grassEffect
+                        treeParams.grassEffect
                             ? h / levels / (j + 1)
-                            : h - ((h / levels) * j + 1)
+                            : h - ((h / levels) * j + 1),
+                        treeParams
                     )
                 )
             );
         }
     }
 
-    static drawScene(context: CanvasRenderingContext2D, width: number, height: number) {
-        const t = Tree.build(params.levels, params.width, params.height(height));
+    static elapsed = 0;
+
+    static drawScene(context: CanvasRenderingContext2D, { width, height, frameCount, sceneParams, treeParams }: AnimationSettings) {
 
         context.fillStyle = rgbaToString(sceneParams.clearColor);
         context.fillRect(0, 0, width, height);
+        if (frameCount % random.randomValueBetweenVariation(sceneParams.treeDrawingFrameRate, sceneParams.treeDrawingFrameRateStutter) !== 0) return;
         context.save();
         context.rotate(Math.PI);
         const treesAmount = sceneParams.treesAmount(width);
+        const t = Tree.build(treeParams.levels, treeParams.width, treeParams.height(height), treeParams);
+        if (treeParams.sectionedBranching) {
+            context.translate(0, -t.h * 0.6)
+        }
         for (let i = 0; i < treesAmount; i++) {
             const segment = width / treesAmount;
             const offset = segment * sceneParams.randomTreeDistributionFactor / 100;
@@ -102,8 +138,8 @@ export class Tree {
             context.translate(segment * -i + random.rangeFloor(-offset, offset), -height);
             context.rotate(
                 (random.rangeFloor(
-                    -sceneParams.mainBranchAngleVariation,
-                    sceneParams.mainBranchAngleVariation
+                    -treeParams.mainBranchAngleVariation,
+                    treeParams.mainBranchAngleVariation
                 ) *
                     Math.PI) /
                 180
@@ -113,7 +149,7 @@ export class Tree {
                 sceneParams.depth / 10 + 1
             );
             context.scale(depth, depth);
-            Tree.draw(t, context);
+            Tree.draw(t, context, treeParams);
             context.restore();
         }
         context.restore();

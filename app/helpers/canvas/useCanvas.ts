@@ -2,11 +2,11 @@ import { useRef, useEffect } from "react";
 import * as random from '../random';
 
 export function useCanvas(draw: (props: { context: CanvasRenderingContext2D, width: number, height: number, frameCount: number }) => void, options?: {
-    renderAfter: number,
-    stutter: number
+    refreshRate: number,
+    refreshRateStutter: number
 }) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
-    
+
     useEffect(() => {
         const context = canvasRef.current?.getContext('2d');
         const resizeFn = (_?: UIEvent) => {
@@ -30,9 +30,9 @@ export function useCanvas(draw: (props: { context: CanvasRenderingContext2D, wid
         const context = canvasRef.current?.getContext('2d')!;
         let frameCount = 0
         let animationFrameId: number;
-        let currentFrameTimestamp = 0;
+        let currentFrameTimestamp = 0; 
         const render = (timestamp: number) => {
-            if (!options || timestamp - currentFrameTimestamp > (options.renderAfter + random.rangeFloor(-options.renderAfter * options.stutter / 100, options.renderAfter * options.stutter / 100))) {
+            if (!options?.refreshRate || timestamp - currentFrameTimestamp > random.randomValueBetweenVariation(options.refreshRate, options.refreshRateStutter)) {
                 frameCount++
                 draw({ context, width: context.canvas.width, height: context.canvas.height, frameCount });
                 currentFrameTimestamp = timestamp;
@@ -45,7 +45,7 @@ export function useCanvas(draw: (props: { context: CanvasRenderingContext2D, wid
         return () => {
             window.cancelAnimationFrame(animationFrameId)
         }
-    }, [])
+    }, [draw, options])
 
 
 
