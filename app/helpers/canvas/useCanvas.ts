@@ -1,10 +1,19 @@
 import { useRef, useEffect } from "react";
 import * as random from '../random';
 
-export function useCanvas(draw: (props: { context: CanvasRenderingContext2D, width: number, height: number, frameCount: number }) => void, options?: {
+export type CanvasDrawFn =  (props: { 
+    context: CanvasRenderingContext2D, 
+    width: number, 
+    height: number, 
+    frameCount: number 
+}) => void
+
+export type CanvasSettings = {
     refreshRate: number,
     refreshRateStutter: number
-}) {
+}
+
+export function useCanvas(draw: CanvasDrawFn, options?: CanvasSettings) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
