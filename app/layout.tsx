@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import Background from "./ui/background/Background";
-import Link from "./ui/link/Link";
+import Background from "./ui/background/background";
+import Link from "./ui/link";
 
 const inter = Roboto({ subsets: ['latin'], weight: '300', style: 'normal' });
 
@@ -39,7 +39,7 @@ export default function RootLayout({
             </nav>
           </header>
 
-          <main className="w-2/5 lg:w-1/5 pt-[50vh]">
+          <main className="w-1/2 sm:w-2/5 lg:w-1/5 pt-[50vh]">
             {children}
           </main>
         </div>
