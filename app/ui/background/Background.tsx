@@ -113,9 +113,6 @@ const animationsForPath: Record<string, SceneAnimationSettings> = {
         },
         refreshRate: 1
     },
-    
-    
-    
 }
 
 function lerpRecursive(a: any, b: any, alpha: number, maxAlpha: number): any {
@@ -129,7 +126,7 @@ function lerpRecursive(a: any, b: any, alpha: number, maxAlpha: number): any {
 export default function Background() {
     const path = usePathname();
     const [currentPath, previousPath] = useChange(path);
-    const currentSettings = animationsForPath[currentPath];
+    const currentSettings = animationsForPath[currentPath] || animationsForPath['/'];
     const previousSettings = previousPath ? animationsForPath[previousPath] : currentSettings;
     let currentFrameCount = 0;
 
