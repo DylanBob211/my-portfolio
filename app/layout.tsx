@@ -39,7 +39,7 @@ export default function RootLayout({
             </nav>
           </header>
 
-          <main className="w-1/2 sm:w-2/5 lg:w-1/5 pt-[50vh]">
+          <main className="w-1/2 sm:w-2/5 lg:w-1/5 py-[50vh]">
             {children}
           </main>
         </div>
