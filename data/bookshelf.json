@@ -1,12 +1,27 @@
 [
     {
-        "title": "Lol",
-        "author": "Da writer",
-        "thoughts": "Proident dolor ut non reprehenderit fugiat amet consequat. Sint labore sit magna et. Ex sunt fugiat nisi commodo adipisicing quis nostrud occaecat commodo ut in dolor in tempor. Cillum eiusmod mollit enim esse ad. Dolore consequat ea aliquip ad quis. Irure aliqua officia enim adipisicing adipisicing cupidatat ut eu duis consectetur ipsum est dolore. Incididunt laborum et veniam dolore proident laboris sit non anim eu proident."
+        "title": "Structure and Interpretation of Computer Programs",
+        "author": "Harold Abelson, Gerald Jay Sussman, Julie Sussman",
+        "thoughts": "A complex, dense, mind blowing book...it is incredible how fast you get used to Lisp syntax"
     },
     {
-        "title": "Lul",
-        "author": "Da other writer",
-        "thoughts": "Commodo occaecat amet laborum amet ullamco officia consequat ad. Ea labore laboris et occaecat irure ea cupidatat officia est proident eiusmod. Incididunt labore nostrud mollit elit. Aliquip sint eiusmod sit ipsum sint irure eu amet proident exercitation velit consectetur. Qui esse nisi do dolor exercitation proident sint labore proident Lorem. Consequat duis reprehenderit proident laborum excepteur mollit in commodo magna minim do."
+        "title": "Game Programming Patterns",
+        "author": "Robert Nystrom",
+        "thoughts": "A book that explains the most common and useful OOP patterns in the context of game programming, but this knowledge goes beyond this context. You can find techniques that give you a better understanding of complex design systems, i.e frameworks."
+    },
+    {
+        "title": "F# For Fun and Profit",
+        "author": "Scott Wlaschin",
+        "thoughts": "I know it is not a book, but it is a great collection of lectures and articles about functional programming. Scott Wlaschin demonstrates that functional programming is not more difficult than Object Oriented Programming, it is just unfamiliar."
+    },
+    {
+        "title": "Refactoring",
+        "author": "Martin Fowler",
+        "thoughts": "This book is the bedrock of my approach to programming. Refactoring is the only way to properly design continuously evolving systems. Don't repeat yourself, but still avoid to abstract too early. Let code smells tell you what is the best design pattern to apply."
+    },
+    {
+        "title": "Clean Code",
+        "author": "Robert C. Martin",
+        "thoughts": "I've heard that this book is outdated. Not to me. What is clean code? This book gives you a great starting point, and also allows you to further develop your conception of what clean code means. I will always suggest this book to everyone starting programming."
     }
 ]

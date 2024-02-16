@@ -1,17 +1,28 @@
 [
     {
-        "title": "Some awesome work",
-        "description": "Amet officia sint amet veniam laborum.",
-        "url": "www.google.com"
+        "title": "Deps Tree",
+        "description": "Allows to visualize and navigate a package.json file, resolving its dependencies and displaying them as a tree. Made with Three.js + Node",
+        "url": "https://github.com/NicolaDoronzo/depstree"
     },
     {
-        "title": "My other work",
-        "description": "Aliqua quis amet culpa tempor adipisicing minim ut ea fugiat.",
-        "url": null
+        "title": "if it's people or you not",
+        "description": "Remixed videoclip with words instead of pixels. Made with HTML Canvas",
+        "url": "https://www.instagram.com/p/CXVr_99FB72/"
     },
     {
-        "title": "My work",
-        "description": "Anim magna incididunt sint cillum consequat.",
-        "url": null
+        "title": "Triangles",
+        "description": "Bouncing lines until it looks good. Made with p5.js",
+        "url": "https://www.instagram.com/p/CWnHdVBs0Wh/"
+    },
+    {
+        "title": "Rec Tree",
+        "description": "Algorithmic generation of trees. It's what you're seeing as a background of this site",
+        "url": "https://github.com/NicolaDoronzo/rec-tree"
+    },
+    {
+        "title": "Words",
+        "description": "Text falling down. Made with matter.js and p5.js",
+        "url": "https://github.com/DylanBob211/words/tree/main"
     }
+    
 ]

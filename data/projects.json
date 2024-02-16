@@ -1,20 +1,29 @@
 [
     {
-        "title": "Ullamco pariatur incididunt nisi proident do et.",
-        "description": "Occaecat velit Lorem qui exercitation sit laboris et nulla voluptate est reprehenderit anim. Esse pariatur dolor eiusmod velit cupidatat ullamco. Nisi consequat dolor deserunt pariatur ad sint do eu eu non ad. Et eiusmod aliqua eu qui occaecat. Adipisicing nostrud esse dolore dolore voluptate officia esse veniam et. Deserunt commodo ullamco magna incididunt eu aliquip eiusmod aliqua proident exercitation laborum.",
-        "stack": ["questo", "quello", "quellaltro", "anche quello", "lo"],
-        "date": "1995-11-27"
+        "title": "Databrowser",
+        "description": "Customizable data visualization web-app. I coordinated a team and developed new features for an outdated application. We managed to recover most of the technical debt accumulated by adding both e2e and unit tests, updating existing dependencies, adding tools to improve the developer experience, and progressively refactoring the whole codebase to use Typescript and modern React paradigms.",
+        "stack": [
+            "Typescript",
+            "React",
+            "Redux (Toolkit)",
+            "Chart.js",
+            "Material UI",
+            "Cypress",
+            "Jest"
+        ],
+        "date": "2023-05-01",
+        "url": "https://esploradati.istat.it/databrowser/"
     },
     {
-        "title": "Incididunt duis ea ipsum non eiusmod sint labore proident do fugiat cillum.",
-        "description": "Exercitation ipsum pariatur labore commodo duis aute duis eiusmod laboris pariatur ea laborum deserunt. Nostrud eiusmod incididunt nulla eu officia velit proident id velit tempor laboris adipisicing sit cupidatat. Minim consectetur incididunt occaecat Lorem aliquip elit commodo. Nostrud laboris minim sunt excepteur amet id ipsum aute sint fugiat commodo.",
-        "stack": ["questo", "quellaltro",  "lo"],
-        "date": "1996-05-27"
-    },
-    {
-        "title": "Ex laboris occaecat ad mollit labore.",
-        "description": "Ea sunt consequat dolore cupidatat laboris in. Nulla tempor amet pariatur commodo excepteur culpa. Proident magna incididunt Lorem sint Lorem mollit voluptate cillum.",
-        "stack": ["quellaltro", "questo", "quello", "lo"],
-        "date": "1997-01-27"
+        "title": "Jarvis",
+        "date": "2022-05-01",
+        "description": "Web application for parameter calculation of lenses and ISO certification printing made for a big lenses manifacturer. I was the lead front-end developer in an agile team, and I created the front-end application from scratch with a TDD approach.",
+        "stack": [
+            "React",
+            "Vite",
+            "Tailwind CSS",
+            "Playwright",
+            "Dotnet 7"
+        ]
     }
 ]

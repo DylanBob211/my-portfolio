@@ -1,33 +1,34 @@
 [
     {
-        "company": "Hey",
-        "description": "Eiusmod voluptate tempor sunt nisi ut consectetur duis qui eiusmod.",
+        "company": "Blazar Group",
+        "description": "Senior Front-end Developer",
         "tasks": [
-            "Labore sint incididunt aliqua irure adipisicing cupidatat labore elit occaecat.",
-            "Reprehenderit dolore exercitation laborum cupidatat esse."
+            "Built and shipped high-quality web applications for many clients using technologies such as JavaScript, TypeScript, React, Angular, Next, and more.",
+            "Led the development of front-end applications, organizing tasks and reviewing the code of junior colleagues.",
+            "Held webinars about programming topics such as reactive programming and common mistakes in React.",
+            "Held a front-end academy for aspiring web developers.",
+            "Helped HR department with recruitment."
         ],
-        "date": "1995-04-27",
-        "url": "www.google.com"
+        "date": "2021-04-01",
+        "url": "https://blazargroup.com/it/"
     },
     {
-        "company": "Bella li",
-        "description": "Eu do nostrud fugiat proident veniam tempor ullamco exercitation officia Lorem.",
+        "company": "King S.r.l",
+        "description": "Junior Front-end Developer",
         "tasks": [
-            "Excepteur commodo do deserunt quis sint. Elit excepteur tempor ea Lorem nostrud esse exercitation duis. Id adipisicing fugiat nostrud anim nulla Lorem irure irure nostrud ipsum labore voluptate excepteur do. Nisi eiusmod veniam eu mollit pariatur id cupidatat dolor ex cupidatat nisi voluptate.",
-            "Irure nisi deserunt ullamco non occaecat nulla fugiat pariatur aute. Dolore do reprehenderit et voluptate. Officia officia ex eu ad reprehenderit cillum sint ipsum. Magna in excepteur sunt proident ipsum fugiat duis magna labore veniam aliqua ea culpa. Do ut culpa magna ad voluptate duis pariatur voluptate eiusmod commodo eiusmod est.",
-            "Laborum sit irure esse sit occaecat. Sunt aute pariatur tempor nostrud ullamco aliqua anim voluptate nisi dolore. Dolore sint in ex ea ullamco. Minim incididunt est laborum anim magna duis do reprehenderit aute magna fugiat ea eu consequat."
+            "Front-end development consultant for big enterprises like banks and insurance companies.",
+            "Partecipated in the creation of a community of developers inside the company."
         ],
-        "date": "2000-07-27",
-        "url": "www.google.com"
+        "date": "2020-02-01",
+        "url": "https://www.kingsrl.com/"
     },
     {
-        "company": "Hoy",
-        "description": "Eiusmod voluptate tempor sunt nisi ut consectetur duis qui eiusmod.",
+        "company": "Freelancer",
+        "description": "Web Designer",
         "tasks": [
-            "Ut pariatur qui aute excepteur nulla voluptate qui nulla proident. Exercitation ea velit mollit in duis sint incididunt. Lorem ex amet Lorem eu reprehenderit veniam amet culpa irure commodo officia sint ea enim. Ipsum nostrud exercitation aliqua duis id minim est. Fugiat dolore eu velit elit mollit magna. Sint in ex fugiat cillum. Reprehenderit laborum irure duis nostrud ut cupidatat nostrud non velit aliqua cupidatat sunt ad minim.",
-            "Laborum sit irure esse sit occaecat. Sunt aute pariatur tempor nostrud ullamco aliqua anim voluptate nisi dolore. Dolore sint in ex ea ullamco. Minim incididunt est laborum anim magna duis do reprehenderit aute magna fugiat ea eu consequat."
+            "Realized static web pages in wordpress",
+            "Sketched web applications using Figma"
         ],
-        "date": "2010-12-27",
-        "url": "www.google.com"
+        "date": "2018-09-01"
     }
 ]
