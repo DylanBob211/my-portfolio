@@ -1,11 +1,12 @@
 import { useRef, useEffect } from "react";
 import * as random from '../random';
+import { useLiveRef } from "../hooks";
 
-export type CanvasDrawFn =  (props: { 
-    context: CanvasRenderingContext2D, 
-    width: number, 
-    height: number, 
-    frameCount: number 
+export type CanvasDrawFn = (props: {
+    context: CanvasRenderingContext2D,
+    width: number,
+    height: number,
+    frameCount: number
 }) => void
 
 export type CanvasSettings = {
@@ -15,6 +16,7 @@ export type CanvasSettings = {
 
 export function useCanvas(draw: CanvasDrawFn, options?: CanvasSettings) {
     const canvasRef = useRef<HTMLCanvasElement>(null);
+    const drawRef = useLiveRef(draw);
 
     useEffect(() => {
         const context = canvasRef.current?.getContext('2d');
@@ -32,29 +34,29 @@ export function useCanvas(draw: CanvasDrawFn, options?: CanvasSettings) {
         return () => {
             window.removeEventListener('resize', resizeFn)
         }
-    }, [draw])
+    }, [])
 
     useEffect(() => {
-
         const context = canvasRef.current?.getContext('2d')!;
         let frameCount = 0
-        let animationFrameId: number;
-        let currentFrameTimestamp = 0; 
+        let currentFrameTimestamp = 0;
+        let animationId: number | null = null;
         const render = (timestamp: number) => {
             if (!options?.refreshRate || timestamp - currentFrameTimestamp > random.randomValueBetweenVariation(options.refreshRate, options.refreshRateStutter)) {
                 frameCount++
-                draw({ context, width: context.canvas.width, height: context.canvas.height, frameCount });
+                drawRef.current({ context, width: context.canvas.width, height: context.canvas.height, frameCount });
                 currentFrameTimestamp = timestamp;
             }
-            animationFrameId = requestAnimationFrame(render);
+            animationId = requestAnimationFrame(render);
         }
 
-        requestAnimationFrame(render)
+        animationId = requestAnimationFrame(render)
 
         return () => {
-            window.cancelAnimationFrame(animationFrameId)
+            if (animationId)
+                cancelAnimationFrame(animationId)
         }
-    }, [draw, options])
+    }, [drawRef, options])
 
 
 
