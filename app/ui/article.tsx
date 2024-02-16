@@ -20,6 +20,6 @@ export namespace Article {
     }
 
     export function Paragraph({ children }: PropsWithChildren) {
-        return <p className="mb-2 text-balance">{children}</p>
+        return <p className="mb-2 text-balance font-bold">{children}</p>
     }
 }
