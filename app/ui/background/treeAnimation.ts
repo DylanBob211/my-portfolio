@@ -1,27 +1,6 @@
 import { rgbaToString } from "../../helpers/colors";
 import * as random from '../../helpers/random';
 
-const treeParams = {
-    levels: 3,
-    height: (height: number) => height / 3,
-    width: 5,
-    branchesAngleVariation: 40,
-    sectionedBranching: true,
-    branchSections: 3,
-    grassEffect: true,
-    color: { r: 20, g: 20, b: 20, a: .5 },
-    mainBranchAngleVariation: 5,
-};
-
-const sceneParams = {
-    treesAmount: (width: number) => Math.floor(width / (100 * window.devicePixelRatio)),
-    clearColor: { r: 200, g: 200, b: 200, a: .03 },
-    randomTreeDistributionFactor: 50,
-    depth: 10,
-    treeDrawingFrameRate: 100,
-    treeDrawingFrameRateStutter: 50,
-}
-
 type RGBA = { r: number, g: number, b: number, a: number };
 
 export interface AnimationSettings {
@@ -135,7 +114,7 @@ export class Tree {
             const segment = width / treesAmount;
             const offset = segment * sceneParams.randomTreeDistributionFactor / 100;
             context.save();
-            context.translate(segment * -i + random.rangeFloor(-offset, offset), -height);
+            context.translate(segment * -i + random.rangeFloor(-offset, offset) - (segment / 2), -height);
             context.rotate(
                 (random.rangeFloor(
                     -treeParams.mainBranchAngleVariation,
