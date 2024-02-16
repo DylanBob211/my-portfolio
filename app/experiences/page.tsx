@@ -12,8 +12,8 @@ const ExperienceItem = ({ company, date, description, tasks, url}: Experience) =
     <Article.Container>
         <Article.Title>{ description }</Article.Title>
         <Article.Subtitle><a target="_blank" href={url}>{ company }</a> { MMdashYYYY(date) }</Article.Subtitle>
-        <ul>
-            {tasks.map((task) => <li key={task}>{task}</li>)}
+        <ul className="list-disc">
+            {tasks.map((task) => <li key={task}><Article.Paragraph>{task}</Article.Paragraph></li>)}
         </ul>
     </Article.Container>
 ) 
