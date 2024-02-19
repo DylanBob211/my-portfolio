@@ -99,22 +99,23 @@ export class Tree {
     static elapsed = 0;
 
     static drawScene(context: CanvasRenderingContext2D, { width, height, frameCount, sceneParams, treeParams }: AnimationSettings) {
-
+        const cssWidth = width / devicePixelRatio;
+        const cssHeight = height / devicePixelRatio;
         context.fillStyle = rgbaToString(sceneParams.clearColor);
         context.fillRect(0, 0, width, height);
         if (frameCount % random.randomValueBetweenVariation(sceneParams.treeDrawingFrameRate, sceneParams.treeDrawingFrameRateStutter) !== 0) return;
         context.save();
         context.rotate(Math.PI);
-        const treesAmount = sceneParams.treesAmount(width);
+        const treesAmount = sceneParams.treesAmount(cssWidth);
         const t = Tree.build(treeParams.levels, treeParams.width, treeParams.height(height), treeParams);
         if (treeParams.sectionedBranching) {
             context.translate(0, -t.h * 0.6)
         }
         for (let i = 0; i < treesAmount; i++) {
-            const segment = width / treesAmount;
+            const segment = cssWidth / treesAmount;
             const offset = segment * sceneParams.randomTreeDistributionFactor / 100;
             context.save();
-            context.translate(segment * -i + random.rangeFloor(-offset, offset) - (segment / 2), -height);
+            context.translate(segment * -i + random.rangeFloor(-offset, offset) - (segment / 2), -cssHeight);
             context.rotate(
                 (random.rangeFloor(
                     -treeParams.mainBranchAngleVariation,
