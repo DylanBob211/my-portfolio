@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 import { useCanvas } from '../../helpers/canvas'
 import { AnimationSettings, Tree } from './treeAnimation'
 import treeAnimation2 from './treeAnimation2'
+import noiseAnimation from './noiseAnimation'
 
 type SceneAnimationSettings = Omit<
   AnimationSettings,
@@ -155,11 +156,11 @@ export default function Background() {
   let currentFrameCount = 0
 
   const canvasRef = useCanvas(
-    ({ context, width, height, frameCount }) => {
+    (props) => {
       // currentFrameCount++;
       // const alpha = clamp(normalize(currentFrameCount, 100, 0), 0, 1);
       // const settings = lerpRecursive(previousSettings, currentSettings, alpha, 1);
-      treeAnimation2({ context, width, height, frameCount })
+      noiseAnimation(props)
     },
     { refreshRate: 24, refreshRateStutter: 100 }
   )

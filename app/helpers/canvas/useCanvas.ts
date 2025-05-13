@@ -7,6 +7,8 @@ export type CanvasDrawFn = (props: {
   width: number
   height: number
   frameCount: number
+  mouseX: number
+  mouseY: number
 }) => void
 
 export type CanvasSettings = {
@@ -36,6 +38,19 @@ export function useCanvas(draw: CanvasDrawFn, options?: CanvasSettings) {
     }
   }, [])
 
+  const mousePositionRef = useRef({ x: 0, y: 0 })
+
+  useEffect(() => {
+    const updateMousePosition = (event: MouseEvent) => {
+      mousePositionRef.current = { x: event.clientX, y: event.clientY }
+    }
+
+    window.addEventListener('mousemove', updateMousePosition)
+    return () => {
+      window.removeEventListener('mousemove', updateMousePosition)
+    }
+  }, [])
+
   useEffect(() => {
     const context = canvasRef.current?.getContext('2d')!
     let frameCount = 0
@@ -56,6 +71,8 @@ export function useCanvas(draw: CanvasDrawFn, options?: CanvasSettings) {
           width: context.canvas.width,
           height: context.canvas.height,
           frameCount,
+          mouseX: mousePositionRef.current.x,
+          mouseY: mousePositionRef.current.y,
         })
         currentFrameTimestamp = timestamp
       }
