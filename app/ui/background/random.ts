@@ -27,6 +27,74 @@ export const random = (function () {
     }
   }
 
+  function perlinNoise() {
+    const grad3 = [
+      [1, 1, 0],
+      [-1, 1, 0],
+      [1, -1, 0],
+      [-1, -1, 0],
+      [1, 0, 1],
+      [-1, 0, 1],
+      [1, 0, -1],
+      [-1, 0, -1],
+      [0, 1, 1],
+      [0, -1, 1],
+      [0, 1, -1],
+      [0, -1, -1],
+    ]
+
+    const p = new Array(256)
+    const perm = new Array(512)
+    const gradP = new Array(512)
+
+    for (let i = 0; i < 256; i++) {
+      p[i] = Math.floor(random() * 256)
+    }
+
+    for (let i = 0; i < 512; i++) {
+      perm[i] = p[i & 255]
+      gradP[i] = grad3[perm[i] % 12]
+    }
+
+    function fade(t: number) {
+      return t * t * t * (t * (t * 6 - 15) + 10)
+    }
+
+    function lerp(a: number, b: number, t: number) {
+      return (1 - t) * a + t * b
+    }
+
+    function dot(g: number[], x: number, y: number) {
+      return g[0] * x + g[1] * y
+    }
+
+    return function (x: number, y: number) {
+      const X = Math.floor(x) & 255
+      const Y = Math.floor(y) & 255
+
+      x -= Math.floor(x)
+      y -= Math.floor(y)
+
+      const u = fade(x)
+      const v = fade(y)
+
+      const g00 = gradP[X + perm[Y]]
+      const g01 = gradP[X + perm[Y + 1]]
+      const g10 = gradP[X + 1 + perm[Y]]
+      const g11 = gradP[X + 1 + perm[Y + 1]]
+
+      const n00 = dot(g00, x, y)
+      const n10 = dot(g10, x - 1, y)
+      const n01 = dot(g01, x, y - 1)
+      const n11 = dot(g11, x - 1, y - 1)
+
+      const nx0 = lerp(n00, n10, u)
+      const nx1 = lerp(n01, n11, u)
+
+      return lerp(nx0, nx1, v)
+    }
+  }
+
   let seededRandom: (() => number) | null = null
 
   function random(): number {
@@ -50,5 +118,6 @@ export const random = (function () {
     seed: _Seed,
     random,
     randomRange,
+    noise: perlinNoise(),
   }
 })()
