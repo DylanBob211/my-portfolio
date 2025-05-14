@@ -3,6 +3,8 @@ import { Roboto } from 'next/font/google'
 import './globals.css'
 import Background from './ui/background'
 import Link from './ui/link'
+import { motion } from 'motion/react'
+import Header from './header'
 
 const inter = Roboto({ subsets: ['latin'], weight: '300', style: 'normal' })
 
@@ -23,29 +25,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Background />
-        <div className="flex min-h-screen flex-col items-end justify-end bg-transparent p-6">
-          <header className="fixed top-0 left-0 p-6">
-            <h1 className="text-3xl font-bold lg:text-5xl">
-              Nicola D&apos;Oronzo
-            </h1>
-            <h2 className="mb-6 text-lg font-semibold">Front-end developer</h2>
-
-            <nav>
-              <ul>
-                <li>
-                  <Link path="/">About</Link>
-                </li>
-                <li>
-                  <Link path="/services">Services</Link>
-                </li>
-                <li>
-                  <Link path="/contact">Contact</Link>
-                </li>
-              </ul>
-            </nav>
-          </header>
-
-          <main className="w-1/2 py-[50vh] sm:w-2/5 lg:w-1/5">{children}</main>
+        <div className="flex min-h-screen flex-col items-end justify-end bg-transparent pt-6 pl-6">
+          <Header />
+          <main className="w-1/2 sm:w-2/5 lg:w-1/5">{children}</main>
         </div>
       </body>
     </html>

@@ -1,10 +1,9 @@
-
 export default function Home() {
   return (
-    <main
-    >
-      Test
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate, facilis quo veritatis iure saepe, impedit nemo aut magni adipisci reiciendis maiores optio, itaque dolores voluptatem quidem odit! Expedita, unde.
-    </main>
-  );
+    <>
+      I&apos;m a full-stack web developer with a front-end focus, committed to
+      writing clean, high-quality code and designing visually compelling web
+      experiences with an eye for graphic and motion design.
+    </>
+  )
 }

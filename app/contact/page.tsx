@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import { Article } from '../ui/article'
+import { motion } from 'motion/react'
 
 export const metadata: Metadata = {
   title: 'Contact',
