@@ -1,13 +1,8 @@
 'use client'
-import { useChange } from '@/app/helpers/hooks'
-import { usePathname } from 'next/navigation'
+import { motion } from 'motion/react'
 import { useCanvas } from '../../helpers/canvas'
 import noiseAnimation from './noiseAnimation'
-import { motion } from 'motion/react'
 export default function Background() {
-  const path = usePathname()
-  const [currentPath, previousPath] = useChange(path)
-
   const canvasRef = useCanvas(noiseAnimation, {
     refreshRate: 24,
     refreshRateStutter: 1,

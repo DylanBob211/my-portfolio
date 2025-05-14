@@ -1,5 +1,10 @@
 import { Metadata } from 'next'
-import { FaLaptopCode, FaReact, FaWordpress } from 'react-icons/fa'
+import { FaWordpressSimple } from 'react-icons/fa'
+import { FaComputer } from 'react-icons/fa6'
+import { FiDatabase } from 'react-icons/fi'
+import { RiReactjsLine } from 'react-icons/ri'
+import { SiAngular } from 'react-icons/si'
+import { TbBrandNextjs } from 'react-icons/tb'
 import { Article } from '../ui/article'
 
 export const metadata: Metadata = {
@@ -10,7 +15,10 @@ export default async function Services() {
   return (
     <div className="sm:w-2/5">
       <Article.Container>
-        <FaLaptopCode size="24" />
+        <div className="flex items-center gap-2">
+          <FaComputer size="28" />
+          <FiDatabase size="24" />
+        </div>
         <Article.Title>Software Development</Article.Title>
         <Article.Paragraph>
           I specialize in full-stack web application development, building both
@@ -20,7 +28,10 @@ export default async function Services() {
         </Article.Paragraph>
       </Article.Container>
       <Article.Container>
-        <FaReact size="24" />
+        <div className="flex items-center gap-2">
+          <RiReactjsLine size="28" />
+          <SiAngular size="24" />
+        </div>
         <Article.Title>Front-end Development Consulence</Article.Title>
         <Article.Paragraph>
           With years of experience in modern front-end frameworks and libraries,
@@ -29,7 +40,10 @@ export default async function Services() {
         </Article.Paragraph>
       </Article.Container>
       <Article.Container>
-        <FaWordpress size="24" />
+        <div className="flex items-center gap-2">
+          <TbBrandNextjs size="28" />
+          <FaWordpressSimple size="24" />
+        </div>
         <Article.Title>Websites development</Article.Title>
         <Article.Paragraph>
           I create websites tailored to your needs, ranging from simple, elegant

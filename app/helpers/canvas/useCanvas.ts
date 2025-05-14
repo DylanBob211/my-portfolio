@@ -56,6 +56,7 @@ export function useCanvas(draw: CanvasDrawFn, options?: CanvasSettings) {
     let frameCount = 0
     let currentFrameTimestamp = 0
     let animationId: number | null = null
+    console.log('effect!')
     const render = (timestamp: number) => {
       if (
         !options?.refreshRate ||

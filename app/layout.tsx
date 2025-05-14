@@ -27,7 +27,7 @@ export default function RootLayout({
         <Background />
         <div className="bg-transparent p-6">
           <Header />
-          <main className="pt-54">
+          <main className="pt-50">
             <AnimatePresence>{children}</AnimatePresence>
           </main>
         </div>
