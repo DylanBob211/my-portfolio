@@ -3,7 +3,7 @@ import { Roboto } from 'next/font/google'
 import './globals.css'
 import Background from './ui/background'
 import Link from './ui/link'
-import { motion } from 'motion/react'
+import { AnimatePresence, motion } from 'motion/react'
 import Header from './header'
 
 const inter = Roboto({ subsets: ['latin'], weight: '300', style: 'normal' })
@@ -25,9 +25,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Background />
-        <div className="flex min-h-screen flex-col items-end justify-end bg-transparent pt-6 pl-6">
+        <div className="bg-transparent p-6">
           <Header />
-          <main className="w-1/2 sm:w-2/5 lg:w-1/5">{children}</main>
+          <main className="pt-54">
+            <AnimatePresence>{children}</AnimatePresence>
+          </main>
         </div>
       </body>
     </html>

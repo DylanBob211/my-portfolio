@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import { Article } from '../ui/article'
-import { motion } from 'motion/react'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -8,9 +7,8 @@ export const metadata: Metadata = {
 
 export default function Contact() {
   return (
-    <Article.Container>
-      <Article.Title>Contact Me</Article.Title>
-      <form className="mt-4 flex flex-col gap-4">
+    <main className="w-1/2 sm:w-2/5 lg:w-1/5">
+      <form className="flex flex-col gap-4">
         <label className="flex flex-col">
           <span className="font-medium text-black">Your Name</span>
           <input
@@ -45,6 +43,6 @@ export default function Contact() {
           Send Message
         </button>
       </form>
-    </Article.Container>
+    </main>
   )
 }

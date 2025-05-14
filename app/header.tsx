@@ -28,7 +28,7 @@ const listItem = {
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 p-6">
+    <header className="fixed top-0 left-0 bg-gradient-to-b p-6">
       <motion.h1
         className="text-3xl font-bold lg:text-5xl"
         initial={{ opacity: 0, y: 5 }}

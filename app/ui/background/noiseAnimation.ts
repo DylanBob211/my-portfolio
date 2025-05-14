@@ -18,7 +18,6 @@ const drawingFunc: CanvasDrawFn = ({
   const gridSize = cssHeight / 100
   const time = frameCount / 200
   const centerX = cssWidth / 2
-  const centerY = cssHeight / 2
 
   for (let i = 0; i < 10; i++) {
     const x = centerX
