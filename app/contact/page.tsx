@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import { Article } from '../ui/article'
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -10,7 +9,7 @@ export default function Contact() {
     <main className="sm:w-2/5 lg:w-1/5">
       <form className="flex flex-col gap-4">
         <label className="flex flex-col">
-          <span className="font-medium">Your Name</span>
+          <span>Your Name</span>
           <input
             type="text"
             name="name"
@@ -19,7 +18,7 @@ export default function Contact() {
           />
         </label>
         <label className="flex flex-col">
-          <span className="font-medium">Your Email</span>
+          <span>Your Email</span>
           <input
             type="email"
             name="email"
@@ -28,7 +27,7 @@ export default function Contact() {
           />
         </label>
         <label className="flex flex-col">
-          <span className="font-medium">Message</span>
+          <span>Message</span>
           <textarea
             name="message"
             className="rounded border border-gray-400 bg-white p-2 transition ease-in-out focus:ring-2 focus:ring-black focus:outline-none"
