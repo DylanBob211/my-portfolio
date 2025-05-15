@@ -24,7 +24,7 @@ export default async function Contact({
       message: formData.get('message') as string,
     }
     await resend.emails.send({
-      from: 'My contact page',
+      from: 'My contact page <onboarding@resend.dev>',
       to: 'nicoladoronzo95@gmail.com',
       subject: `${emailData.name} ti cerca`,
       react: await EmailTemplate(emailData),

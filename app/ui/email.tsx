@@ -1,4 +1,3 @@
-import { em } from 'motion/react-client'
 import * as React from 'react'
 
 interface EmailTemplateProps {
