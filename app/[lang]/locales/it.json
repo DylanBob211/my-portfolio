@@ -23,7 +23,7 @@
     "submitButton": "Invia Messaggio"
   },
   "homepage": {
-    "welcomeMessage": "Benvenuto nel mio portfolio",
-    "introduction": "Sono uno sviluppatore appassionato che crea soluzioni innovative per il web."
+    "introduction": "Sono uno sviluppatore web full-stack con un focus sul front-end. Adoro realizzare esperienze web visivamente coinvolgenti e amo l'arte generativa.",
+    "cta": "Ecco cosa faccio"
   }
 }

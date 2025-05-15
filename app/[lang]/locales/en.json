@@ -23,7 +23,7 @@
     "submitButton": "Send Message"
   },
   "homepage": {
-    "welcomeMessage": "Welcome to my portfolio",
-    "introduction": "I am a passionate developer creating innovative solutions for the web."
+    "introduction": "I'm a full-stack web developer with a front-end focus. I love realizing visually compelling web experiences and I love generative art.",
+    "cta": "Here is what i do"
   }
 }

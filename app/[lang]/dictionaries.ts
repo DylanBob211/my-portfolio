@@ -16,8 +16,8 @@ type Dictionary = {
     submitButton: string
   }
   homepage: {
-    welcomeMessage: string
     introduction: string
+    cta: string
   }
 }
 

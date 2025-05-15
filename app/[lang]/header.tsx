@@ -3,7 +3,7 @@ import Link from '../ui/link'
 import { motion } from 'motion/react'
 
 const navItems = [
-  { name: 'About', path: '/' },
+  { name: 'About', path: '' },
   { name: 'Services', path: '/services' },
   { name: 'Contact', path: '/contact' },
 ]
