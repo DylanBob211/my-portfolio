@@ -1,6 +1,6 @@
 import 'server-only'
 
-type Dictionary = {
+export type Dictionary = {
   services: {
     softwareDevelopment: { title: string; description: string }
     frontendDevelopment: { title: string; description: string }
@@ -18,6 +18,11 @@ type Dictionary = {
   homepage: {
     introduction: string
     cta: string
+  }
+  nav: {
+    about: string
+    services: string
+    contact: string
   }
 }
 

@@ -8,9 +8,10 @@ export const metadata: Metadata = {
 export default async function Contact({
   params,
 }: {
-  params: { lang: 'en' | 'it' }
+  params: Promise<{ lang: 'en' | 'it' }>
 }) {
-  const dict = await getDictionary(params.lang)
+  const resolvedParams = await params
+  const dict = await getDictionary(resolvedParams.lang)
 
   return (
     <main className="sm:w-2/5 lg:w-1/5">

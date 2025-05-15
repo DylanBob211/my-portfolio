@@ -25,5 +25,10 @@
   "homepage": {
     "introduction": "I'm a full-stack web developer with a front-end focus. I love realizing visually compelling web experiences and I love generative art.",
     "cta": "Here is what i do"
+  },
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
   }
 }

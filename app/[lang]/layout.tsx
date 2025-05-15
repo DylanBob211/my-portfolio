@@ -4,6 +4,7 @@ import '../globals.css'
 import Background from '../ui/background'
 import Link from '../ui/link'
 import Header from './header'
+import { getDictionary } from './dictionaries'
 
 const inter = Roboto({ subsets: ['latin'], weight: '300', style: 'normal' })
 
@@ -24,16 +25,16 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode
-  params: Promise<{ lang: string }>
+  params: Promise<{ lang: 'en' | 'it' }>
 }) {
-  const { lang } = await params
-
+  const resolvedParams = await params
+  const dict = await getDictionary(resolvedParams.lang)
   return (
-    <html lang={lang}>
+    <html lang={resolvedParams.lang}>
       <body className={inter.className}>
         <Background />
         <div className="min-h-screen bg-transparent p-6">
-          <Header />
+          <Header dict={dict} />
 
           <main className="pt-50">{children}</main>
         </div>

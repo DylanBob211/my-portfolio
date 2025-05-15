@@ -25,5 +25,10 @@
   "homepage": {
     "introduction": "Sono uno sviluppatore web full-stack con un focus sul front-end. Adoro realizzare esperienze web visivamente coinvolgenti e amo l'arte generativa.",
     "cta": "Ecco cosa faccio"
+  },
+  "nav": {
+    "about": "Chi sono",
+    "services": "Servizi",
+    "contact": "Contatti"
   }
 }

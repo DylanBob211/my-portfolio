@@ -1,12 +1,7 @@
 'use client'
 import Link from '../ui/link'
 import { motion } from 'motion/react'
-
-const navItems = [
-  { name: 'About', path: '' },
-  { name: 'Services', path: '/services' },
-  { name: 'Contact', path: '/contact' },
-]
+import { Dictionary } from './dictionaries'
 
 const list = {
   hidden: { opacity: 0 },
@@ -26,9 +21,15 @@ const listItem = {
   show: { opacity: 1, y: 0 },
 }
 
-export default function Header() {
+export default function Header({ dict }: { dict: Dictionary }) {
+  const navItems = [
+    { name: dict.nav.about, path: '' },
+    { name: dict.nav.services, path: '/services' },
+    { name: dict.nav.contact, path: '/contact' },
+  ]
+
   return (
-    <header className="fixed top-0 left-0 w-full bg-gradient-to-b from-white via-white/80 via-50% to-transparent p-6">
+    <header className="fixed top-0 left-0 w-full bg-gradient-to-b from-white via-white/80 via-80% to-transparent p-6">
       <motion.h1
         className="text-3xl font-bold lg:text-5xl"
         initial={{ opacity: 0, y: 5 }}
