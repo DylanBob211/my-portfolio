@@ -1,5 +1,5 @@
 'use client'
-import { usePathname } from 'next/navigation'
+import { usePathname, useParams } from 'next/navigation'
 import NextLink from 'next/link'
 import { PropsWithChildren } from 'react'
 
@@ -8,11 +8,19 @@ export default function Link({
   children,
 }: PropsWithChildren<{ path: string }>) {
   const currentPath = usePathname()
+  const params = useParams()
+  const locale = params?.lang || 'it'
+
+  const localizedPath = `/${locale}${path}`
 
   return (
     <>
-      <NextLink href={path}>
-        <span className={currentPath === path ? 'font-normal' : 'font-bold'}>
+      <NextLink href={localizedPath}>
+        <span
+          className={
+            currentPath === localizedPath ? 'font-normal' : 'font-bold'
+          }
+        >
           {children}
         </span>
       </NextLink>

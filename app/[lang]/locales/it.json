@@ -1,0 +1,29 @@
+{
+  "services": {
+    "softwareDevelopment": {
+      "title": "Sviluppo Software",
+      "description": "Mi specializzo nello sviluppo di applicazioni web full-stack, costruendo sia interfacce utente intuitive che sistemi back-end robusti. Sfrutto le piattaforme cloud per creare applicazioni scalabili e affidabili, ottimizzando prestazioni e disponibilità."
+    },
+    "frontendDevelopment": {
+      "title": "Consulenza Sviluppo Front-end",
+      "description": "Con anni di esperienza nei moderni framework e librerie front-end, fornisco una guida esperta per aiutarti a costruire interfacce utente scalabili, manutenibili e ad alte prestazioni."
+    },
+    "websitesDevelopment": {
+      "title": "Sviluppo Siti Web",
+      "description": "Creo siti web su misura per le tue esigenze, che spaziano da design semplici ed eleganti a piattaforme complesse e ricche di funzionalità. Che tu abbia bisogno di un blog personale, un portfolio o un sito aziendale completamente personalizzato, garantisco un'esperienza utente fluida e un design reattivo."
+    }
+  },
+  "contact": {
+    "nameLabel": "Il tuo nome",
+    "namePlaceholder": "Inserisci il tuo nome",
+    "emailLabel": "La tua email",
+    "emailPlaceholder": "Inserisci la tua email",
+    "messageLabel": "Messaggio",
+    "messagePlaceholder": "Inserisci il tuo messaggio",
+    "submitButton": "Invia Messaggio"
+  },
+  "homepage": {
+    "welcomeMessage": "Benvenuto nel mio portfolio",
+    "introduction": "Sono uno sviluppatore appassionato che crea soluzioni innovative per il web."
+  }
+}

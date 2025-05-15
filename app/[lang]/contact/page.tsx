@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { getDictionary } from '../[lang]/dictionaries'
+import { getDictionary } from '../dictionaries'
 
 export const metadata: Metadata = {
   title: 'Contact',

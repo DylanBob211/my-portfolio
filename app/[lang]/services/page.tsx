@@ -5,8 +5,8 @@ import { FiDatabase } from 'react-icons/fi'
 import { RiReactjsLine } from 'react-icons/ri'
 import { SiAngular } from 'react-icons/si'
 import { TbBrandNextjs } from 'react-icons/tb'
-import { Article } from '../ui/article'
-import { getDictionary } from '../[lang]/dictionaries'
+import { Article } from '../../ui/article'
+import { getDictionary } from '../dictionaries'
 
 export const metadata: Metadata = {
   title: 'Services',

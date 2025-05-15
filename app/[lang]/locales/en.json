@@ -1,0 +1,29 @@
+{
+  "services": {
+    "softwareDevelopment": {
+      "title": "Software Development",
+      "description": "I specialize in full-stack web application development, building both intuitive user interfaces and robust back-end systems. I leverage cloud platforms to build scalable and reliable applications, optimizing performance and availability."
+    },
+    "frontendDevelopment": {
+      "title": "Front-end Development Consulence",
+      "description": "With years of experience in modern front-end frameworks and libraries, I provide expert guidance to help you build scalable, maintainable, and high-performance user interfaces."
+    },
+    "websitesDevelopment": {
+      "title": "Websites Development",
+      "description": "I create websites tailored to your needs, ranging from simple, elegant designs to complex, feature-rich platforms. Whether you need a personal blog, a portfolio, or a fully customized business website, I ensure a seamless user experience and responsive design."
+    }
+  },
+  "contact": {
+    "nameLabel": "Your Name",
+    "namePlaceholder": "Enter your name",
+    "emailLabel": "Your Email",
+    "emailPlaceholder": "Enter your email",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Enter your message",
+    "submitButton": "Send Message"
+  },
+  "homepage": {
+    "welcomeMessage": "Welcome to my portfolio",
+    "introduction": "I am a passionate developer creating innovative solutions for the web."
+  }
+}
