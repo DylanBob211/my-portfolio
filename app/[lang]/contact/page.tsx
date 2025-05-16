@@ -15,7 +15,7 @@ export default async function Contact({
   const dict = await getDictionary(resolvedParams.lang)
 
   return (
-    <main className="sm:w-2/5 lg:w-1/5">
+    <main className="sm:w-2/5 lg:w-1/4">
       <ContactForm dict={dict} />
     </main>
   )

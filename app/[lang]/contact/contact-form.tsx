@@ -49,7 +49,7 @@ const ActionButton = forwardRef<
       transition={{ ease: 'anticipate', duration: 0.05 }}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.99 }}
-      className="relative h-10 overflow-hidden rounded border border-gray-400 p-2 transition ease-in-out focus:ring-1 focus:ring-gray-700 focus:outline-none"
+      className="relative h-10 overflow-hidden rounded border border-gray-400 bg-white/50 p-2 transition ease-in-out focus:ring-1 focus:ring-gray-700 focus:outline-none"
       {...props}
     >
       <MotionConfig transition={{ duration: 0.2, delay: 0.5 }}>
@@ -105,7 +105,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
             type="text"
             name="name"
             required
-            className="rounded border border-gray-400 bg-white p-2 transition ease-in-out focus:ring-1 focus:ring-gray-700 focus:outline-none"
+            className="rounded border border-gray-400 bg-white/50 p-2 transition ease-in-out focus:ring-1 focus:ring-gray-700 focus:outline-none"
             placeholder={dict.contact.namePlaceholder}
           />
         </label>
@@ -115,7 +115,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
             type="email"
             name="email"
             required
-            className="rounded border border-gray-400 bg-white p-2 transition ease-in-out focus:ring-1 focus:ring-gray-700 focus:outline-none"
+            className="rounded border border-gray-400 bg-white/50 p-2 transition ease-in-out focus:ring-1 focus:ring-gray-700 focus:outline-none"
             placeholder={dict.contact.emailPlaceholder}
           />
         </label>
@@ -124,7 +124,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
           <textarea
             name="message"
             required
-            className="rounded border border-gray-400 bg-white p-2 transition ease-in-out focus:ring-1 focus:ring-gray-700 focus:outline-none"
+            className="rounded border border-gray-400 bg-white/50 p-2 transition ease-in-out focus:ring-1 focus:ring-gray-700 focus:outline-none"
             placeholder={dict.contact.messagePlaceholder}
             rows={5}
           />

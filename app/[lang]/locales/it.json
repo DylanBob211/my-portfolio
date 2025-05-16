@@ -1,7 +1,7 @@
 {
   "services": {
-    "softwareDevelopment": {
-      "title": "Sviluppo Software",
+    "webappDevelopment": {
+      "title": "Sviluppo Applicazioni Web",
       "description": "Mi specializzo nello sviluppo di applicazioni web full-stack, costruendo sia interfacce utente intuitive che sistemi back-end robusti. Sfrutto le piattaforme cloud per creare applicazioni scalabili e affidabili, ottimizzando prestazioni e disponibilità."
     },
     "frontendDevelopment": {

@@ -7,6 +7,7 @@ import { SiAngular } from 'react-icons/si'
 import { TbBrandNextjs } from 'react-icons/tb'
 import { Article } from '../../ui/article'
 import { getDictionary } from '../dictionaries'
+import { FaCss3 } from 'react-icons/fa'
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -26,9 +27,9 @@ export default async function Services({
           <FaComputer size="28" />
           <FiDatabase size="24" />
         </div>
-        <Article.Title>{dict.services.softwareDevelopment.title}</Article.Title>
+        <Article.Title>{dict.services.webappDevelopment.title}</Article.Title>
         <Article.Paragraph>
-          {dict.services.softwareDevelopment.description}
+          {dict.services.webappDevelopment.description}
         </Article.Paragraph>
       </Article.Container>
       <Article.Container>
@@ -43,7 +44,7 @@ export default async function Services({
       </Article.Container>
       <Article.Container>
         <div className="flex items-center gap-2">
-          <TbBrandNextjs size="28" />
+          <FaCss3 size="24" />
           <FaWordpressSimple size="24" />
         </div>
         <Article.Title>{dict.services.websitesDevelopment.title}</Article.Title>

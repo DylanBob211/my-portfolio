@@ -4,6 +4,7 @@ import '../globals.css'
 import Background from '../ui/background'
 import { getDictionary } from './dictionaries'
 import Header from './header'
+import { Footer } from './footer'
 
 const inter = Roboto({ subsets: ['latin'], weight: '300', style: 'normal' })
 
@@ -32,10 +33,12 @@ export default async function RootLayout({
     <html lang={resolvedParams.lang}>
       <body className={inter.className}>
         <Background />
-        <div className="min-h-screen bg-transparent p-6">
+        <div className="relative container mx-auto min-h-screen bg-transparent">
           <Header dict={dict} />
 
-          <main className="pt-50">{children}</main>
+          <main className="pt-50 pb-20 lg:pt-60">{children}</main>
+
+          <Footer />
         </div>
       </body>
     </html>
