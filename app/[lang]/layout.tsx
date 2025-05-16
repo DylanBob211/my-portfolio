@@ -8,12 +8,21 @@ import { Footer } from './footer'
 
 const inter = Roboto({ subsets: ['latin'], weight: '300', style: 'normal' })
 
-export const metadata: Metadata = {
-  title: {
-    template: "%s | Nicola D'Oronzo",
-    default: "Nicola D'Oronzo",
-  },
-  description: 'A portfolio website presenting myself, my work and what I like',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: 'en' | 'it' }>
+}): Promise<Metadata> {
+  const resolvedParams = await params
+  const dict = await getDictionary(resolvedParams.lang)
+
+  return {
+    title: {
+      template: `%s | ${dict.meta.title}`,
+      default: dict.meta.title,
+    },
+    description: dict.meta.description,
+  }
 }
 
 export async function generateStaticParams() {

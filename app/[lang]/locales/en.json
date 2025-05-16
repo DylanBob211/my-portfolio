@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Nicola D'Oronzo - Fullstack Web Developer | Websites | Webapps - Angular, React, Javascript",
+    "description": "Fullstack web developer: web applications, websites, and frontend consulting. Contact me to bring your online project to life."
+  },
   "services": {
     "webappDevelopment": {
       "title": "Webapp Development",

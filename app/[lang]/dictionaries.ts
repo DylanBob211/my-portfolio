@@ -1,6 +1,10 @@
 import 'server-only'
 
 export type Dictionary = {
+  meta: {
+    title: string
+    description: string
+  }
   services: {
     webappDevelopment: { title: string; description: string }
     frontendDevelopment: { title: string; description: string }

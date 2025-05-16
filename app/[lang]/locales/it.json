@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Nicola D'Oronzo - Sviluppatore Web Fullstack | Siti Web | Applicazioni Web - Angular, React, Javascript",
+    "description": "Sviluppatore web fullstack: applicazioni web, siti web e consulenza frontend. Contattami per dare vita al tuo progetto online."
+  },
   "services": {
     "webappDevelopment": {
       "title": "Sviluppo Applicazioni Web",
