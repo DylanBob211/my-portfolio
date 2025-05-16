@@ -14,6 +14,9 @@ export type Dictionary = {
     messageLabel: string
     messagePlaceholder: string
     submitButton: string
+    emailSent: string
+    emailGenericError: string
+    emailLoading: string
   }
   homepage: {
     introduction: string

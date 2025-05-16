@@ -20,7 +20,10 @@
     "emailPlaceholder": "Enter your email",
     "messageLabel": "Message",
     "messagePlaceholder": "Enter your message",
-    "submitButton": "Send Message"
+    "submitButton": "Send Message",
+    "emailSent": "Grazie per avermi scritto!",
+    "emailGenericError": "Qualcosa è andato storto",
+    "emailLoading": "Invio in corso"
   },
   "homepage": {
     "introduction": "I'm a full-stack web developer with a front-end focus. I love realizing visually compelling web experiences and I love generative art.",

@@ -2,9 +2,8 @@ import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import '../globals.css'
 import Background from '../ui/background'
-import Link from '../ui/link'
-import Header from './header'
 import { getDictionary } from './dictionaries'
+import Header from './header'
 
 const inter = Roboto({ subsets: ['latin'], weight: '300', style: 'normal' })
 
