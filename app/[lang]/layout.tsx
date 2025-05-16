@@ -22,6 +22,13 @@ export async function generateMetadata({
       default: dict.meta.title,
     },
     description: dict.meta.description,
+    alternates: {
+      canonical: 'https://nicoladoronzo.xyz',
+      languages: {
+        'en-US': 'https://nicoladoronzo.xyz/en',
+        'it-IT': 'https://nicoladoronzo.xyz/it',
+      },
+    },
   }
 }
 
