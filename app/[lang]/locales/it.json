@@ -6,25 +6,25 @@
   "services": {
     "webappDevelopment": {
       "title": "Sviluppo Applicazioni Web",
-      "description": "Mi specializzo nello sviluppo di applicazioni web full-stack, costruendo sia interfacce utente intuitive che sistemi back-end robusti. Sfrutto le piattaforme cloud per creare applicazioni scalabili e affidabili, ottimizzando prestazioni e disponibilità."
+      "description": "Sono specializzato nello sviluppo di applicazioni web full-stack, creando sia interfacce utente intuitive che sistemi back-end robusti. Utilizzo piattaforme cloud per realizzare applicazioni scalabili e affidabili, ottimizzando performance e disponibilità."
     },
     "frontendDevelopment": {
       "title": "Consulenza Sviluppo Front-end",
-      "description": "Con anni di esperienza nei moderni framework e librerie front-end, fornisco una guida esperta per aiutarti a costruire interfacce utente scalabili, manutenibili e ad alte prestazioni."
+      "description": "Grazie alla mia pluriennale esperienza con i più recenti framework e librerie front-end, fornisco consulenza qualificata per sviluppare interfacce utente scalabili, facili da mantenere e con performance elevate."
     },
     "websitesDevelopment": {
       "title": "Sviluppo Siti Web",
-      "description": "Creo siti web su misura per le tue esigenze, che spaziano da design semplici ed eleganti a piattaforme complesse e ricche di funzionalità. Che tu abbia bisogno di un blog personale, un portfolio o un sito aziendale completamente personalizzato, garantisco un'esperienza utente fluida e un design reattivo."
+      "description": "Creo siti web su misura per le tue esigenze, spaziando da design semplici ed eleganti a piattaforme complesse e ricche di funzionalità. Che tu abbia bisogno di un blog personale, un portfolio o un sito web aziendale completamente personalizzato, garantisco un'esperienza utente fluida e un design responsivo."
     }
   },
   "contact": {
-    "nameLabel": "Il tuo nome",
+    "nameLabel": "Nome",
     "namePlaceholder": "Inserisci il tuo nome",
-    "emailLabel": "La tua email",
+    "emailLabel": "Email",
     "emailPlaceholder": "Inserisci la tua email",
     "messageLabel": "Messaggio",
     "messagePlaceholder": "Inserisci il tuo messaggio",
-    "submitButton": "Invia Messaggio",
+    "submitButton": "Invia",
     "emailSent": "Grazie per avermi scritto!",
     "emailGenericError": "Qualcosa è andato storto",
     "emailLoading": "Invio in corso"
