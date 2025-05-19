@@ -1,4 +1,4 @@
-import DrawOutlineButton from '@/app/ui/fancy-button'
+import FancyButton from '@/app/ui/fancy-button'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { FaCss3, FaWordpressSimple } from 'react-icons/fa'
@@ -53,9 +53,11 @@ export default async function Services({
         </Article.Paragraph>
       </Article.Container>
 
-      <Link href="/contact" className="mt-2 block cursor-pointer font-bold">
-        <DrawOutlineButton>{dict.services.cta}</DrawOutlineButton>
-      </Link>
+      <div className="mt-4">
+        <Link href="/contact" className="cursor-pointer font-bold">
+          <FancyButton>{dict.services.cta}</FancyButton>
+        </Link>
+      </div>
     </div>
   )
 }
