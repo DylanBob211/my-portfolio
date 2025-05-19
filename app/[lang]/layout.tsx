@@ -56,6 +56,27 @@ export default async function RootLayout({
 
           <Footer />
         </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org/',
+              '@type': 'Person',
+              name: "Nicola D'Oronzo",
+              url: 'https://nicoladoronzo.xyz',
+              sameAs: [
+                'https://www.linkedin.com/in/nicola-d-oronzo-1a88a4128',
+                'https://github.com/NicolaDoronzo',
+                'https://www.instagram.com/nicola.doronzo/',
+              ],
+              jobTitle: 'Web Developer, Front-end Specialist and Consultant',
+              worksFor: {
+                '@type': 'Organization',
+                name: 'Freelance',
+              },
+            }),
+          }}
+        />
       </body>
     </html>
   )
