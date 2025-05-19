@@ -8,7 +8,7 @@ const DrawOutlineButton = forwardRef<
     <button
       ref={ref}
       {...rest}
-      className="group relative px-4 py-2 font-bold text-gray-700 transition-colors duration-[400ms] hover:text-gray-700"
+      className="group relative cursor-pointer px-4 py-2 font-bold text-gray-700 transition-colors duration-[400ms] hover:text-gray-700"
     >
       <span>{children}</span>
 
