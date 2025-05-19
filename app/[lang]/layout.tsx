@@ -51,7 +51,9 @@ export default async function RootLayout({
         <Background />
         <div className="relative container mx-auto min-h-screen bg-transparent">
           <Header dict={dict} />
-          <main className="pt-40 pb-20 lg:pt-46 lg:text-lg">{children}</main>
+          <main className="pt-40 pb-26 lg:pt-46 lg:pb-20 lg:text-lg">
+            {children}
+          </main>
 
           <Footer />
         </div>
