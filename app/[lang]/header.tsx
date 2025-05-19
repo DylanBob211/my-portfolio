@@ -31,7 +31,7 @@ export default function Header({ dict }: { dict: Dictionary }) {
   ]
   const locale = useCurrentLocale()
   return (
-    <header className="fixed top-0 left-0 w-full bg-gradient-to-b from-white via-white/90 via-80% to-transparent pt-6 pb-12">
+    <header className="fixed top-0 left-0 w-full bg-gradient-to-b from-white via-white/90 via-80% to-transparent pt-6 pb-10">
       <div className="container mx-auto">
         <NextLink href={`/${locale}`}>
           <motion.h1
