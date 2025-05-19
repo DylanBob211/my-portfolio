@@ -10,7 +10,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
       initial={{ opacity: 0, y: 5 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 5 }}
-      transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.8 }}
+      transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.4 }}
       className="h-full w-full"
     >
       {children}
