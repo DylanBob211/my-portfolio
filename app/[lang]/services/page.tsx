@@ -1,13 +1,13 @@
+import DrawOutlineButton from '@/app/ui/fancy-button'
 import { Metadata } from 'next'
-import { FaWordpressSimple } from 'react-icons/fa'
+import Link from 'next/link'
+import { FaCss3, FaWordpressSimple } from 'react-icons/fa'
 import { FaComputer } from 'react-icons/fa6'
 import { FiDatabase } from 'react-icons/fi'
 import { RiReactjsLine } from 'react-icons/ri'
 import { SiAngular } from 'react-icons/si'
-import { TbBrandNextjs } from 'react-icons/tb'
 import { Article } from '../../ui/article'
 import { getDictionary } from '../dictionaries'
-import { FaCss3 } from 'react-icons/fa'
 
 export const metadata: Metadata = {
   title: 'Services',
@@ -52,6 +52,10 @@ export default async function Services({
           {dict.services.websitesDevelopment.description}
         </Article.Paragraph>
       </Article.Container>
+
+      <Link href="/contact" className="mt-2 block cursor-pointer font-bold">
+        <DrawOutlineButton>{dict.services.cta}</DrawOutlineButton>
+      </Link>
     </div>
   )
 }

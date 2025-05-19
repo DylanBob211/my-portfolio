@@ -31,7 +31,7 @@ export default function Header({ dict }: { dict: Dictionary }) {
   ]
   const locale = useCurrentLocale()
   return (
-    <header className="fixed top-0 left-0 w-full bg-gradient-to-b from-white via-white/80 via-80% to-transparent pt-6 pb-10">
+    <header className="fixed top-0 left-0 w-full bg-gradient-to-b from-white via-white/90 via-80% to-transparent pt-6 pb-10">
       <div className="container mx-auto">
         <NextLink href={`/${locale}`}>
           <motion.h1
@@ -53,7 +53,12 @@ export default function Header({ dict }: { dict: Dictionary }) {
         </motion.h2>
 
         <nav>
-          <motion.ul initial="hidden" animate="show" variants={list}>
+          <motion.ul
+            initial="hidden"
+            animate="show"
+            variants={list}
+            className="flex gap-4"
+          >
             {navItems.map((item, i) => (
               <motion.li key={item.name + item.path} variants={listItem}>
                 <Link path={item.path}>{item.name}</Link>

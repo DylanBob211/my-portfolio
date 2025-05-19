@@ -9,6 +9,7 @@ export type Dictionary = {
     webappDevelopment: { title: string; description: string }
     frontendDevelopment: { title: string; description: string }
     websitesDevelopment: { title: string; description: string }
+    cta: string
   }
   contact: {
     nameLabel: string
