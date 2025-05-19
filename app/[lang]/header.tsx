@@ -35,7 +35,7 @@ export default function Header({ dict }: { dict: Dictionary }) {
       <div className="container mx-auto">
         <NextLink href={`/${locale}`}>
           <motion.h1
-            className="text-3xl font-bold lg:text-5xl"
+            className="text-3xl font-bold lg:text-6xl"
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeInOut' }}
@@ -44,7 +44,7 @@ export default function Header({ dict }: { dict: Dictionary }) {
           </motion.h1>
         </NextLink>
         <motion.h2
-          className="mb-4 text-lg font-semibold"
+          className="mb-4 text-lg font-semibold lg:text-2xl"
           initial={{ opacity: 0, y: 5 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: 'easeInOut', delay: 0.2 }}
@@ -60,7 +60,11 @@ export default function Header({ dict }: { dict: Dictionary }) {
             className="flex gap-4"
           >
             {navItems.map((item, i) => (
-              <motion.li key={item.name + item.path} variants={listItem}>
+              <motion.li
+                key={item.name + item.path}
+                variants={listItem}
+                className="lg:text-lg"
+              >
                 <Link path={item.path}>{item.name}</Link>
               </motion.li>
             ))}
