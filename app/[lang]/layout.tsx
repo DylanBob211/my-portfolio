@@ -73,8 +73,14 @@ export default async function RootLayout({
                 'https://github.com/NicolaDoronzo',
                 'https://www.instagram.com/nicola.doronzo/',
               ],
-              jobTitle: 'Web Developer, Front-end Specialist and Consultant',
-
+              jobTitle: dict.meta.jobTitle,
+              address: {
+                '@type': 'PostalAddress',
+                addressCountry: 'IT',
+                addressLocality: 'Perugia',
+                addressRegion: 'Umbria',
+                postalCode: '06124',
+              },
               worksFor: {
                 '@type': 'Organization',
                 name: 'Freelance',

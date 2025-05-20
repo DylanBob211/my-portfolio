@@ -4,6 +4,7 @@ export type Dictionary = {
   meta: {
     title: string
     description: string
+    jobTitle: string
   }
   services: {
     webappDevelopment: { title: string; description: string }
