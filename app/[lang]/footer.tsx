@@ -33,7 +33,7 @@ export function Footer() {
     },
   ]
   return (
-    <footer className="fixed bottom-0 left-0 w-full bg-gradient-to-t from-white via-white/80 via-80% to-transparent py-6">
+    <footer className="fixed bottom-0 left-0 w-full bg-gradient-to-t from-white via-white/80 via-80% to-transparent py-6 dark:from-black dark:via-black/50 dark:via-50%">
       <motion.div
         className="container mx-auto flex gap-4"
         initial="hidden"
@@ -49,7 +49,7 @@ export function Footer() {
         {links.map((link) => (
           <motion.a
             key={link.href}
-            className="text-gray-700 transition-colors duration-300 hover:scale-105 hover:text-gray-500 active:scale-95"
+            className="text-gray-700 transition duration-300 hover:scale-105 hover:text-gray-500 active:scale-95 dark:text-white dark:hover:text-gray-100"
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"

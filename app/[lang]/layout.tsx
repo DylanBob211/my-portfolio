@@ -5,6 +5,7 @@ import Background from '../ui/background'
 import { getDictionary } from './dictionaries'
 import Header from './header'
 import { Footer } from './footer'
+import { ThemeProvider } from 'next-themes'
 
 const inter = Roboto({ subsets: ['latin'], weight: '300', style: 'normal' })
 
@@ -46,17 +47,19 @@ export default async function RootLayout({
   const resolvedParams = await params
   const dict = await getDictionary(resolvedParams.lang)
   return (
-    <html lang={resolvedParams.lang}>
+    <html lang={resolvedParams.lang} suppressHydrationWarning>
       <body className={inter.className}>
-        <Background />
-        <div className="relative container mx-auto min-h-screen bg-transparent">
-          <Header dict={dict} />
-          <main className="pt-40 pb-26 lg:pt-46 lg:pb-20 lg:text-lg">
-            {children}
-          </main>
+        <ThemeProvider attribute="class">
+          <Background />
+          <div className="relative container mx-auto min-h-screen bg-transparent">
+            <Header dict={dict} />
+            <main className="pt-40 pb-26 lg:pt-46 lg:pb-20 lg:text-lg">
+              {children}
+            </main>
 
-          <Footer />
-        </div>
+            <Footer />
+          </div>
+        </ThemeProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -71,6 +74,7 @@ export default async function RootLayout({
                 'https://www.instagram.com/nicola.doronzo/',
               ],
               jobTitle: 'Web Developer, Front-end Specialist and Consultant',
+
               worksFor: {
                 '@type': 'Organization',
                 name: 'Freelance',
