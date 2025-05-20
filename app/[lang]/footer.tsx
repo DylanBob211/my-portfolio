@@ -4,12 +4,6 @@ import { motion } from 'motion/react'
 import { FaLinkedin } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'
 import { FaInstagram } from 'react-icons/fa'
-import dynamic from 'next/dynamic'
-import LangsToggle from '../ui/langs-toggle'
-
-const LightDarkToggle = dynamic(() => import('../ui/light-dark-toggle'), {
-  ssr: false,
-})
 
 const list = {
   hidden: { opacity: 0 },
@@ -67,8 +61,6 @@ export function Footer() {
             {link.icon}
           </motion.a>
         ))}
-        <LightDarkToggle />
-        <LangsToggle />
       </motion.div>
     </footer>
   )
