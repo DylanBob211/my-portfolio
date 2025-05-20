@@ -48,8 +48,8 @@ export default async function RootLayout({
   const dict = await getDictionary(resolvedParams.lang)
   return (
     <html lang={resolvedParams.lang} suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider attribute="class">
+      <body className={`${inter.className} transition`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Background />
           <div className="relative container mx-auto min-h-screen bg-transparent">
             <Header dict={dict} />

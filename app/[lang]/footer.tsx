@@ -4,6 +4,11 @@ import { motion } from 'motion/react'
 import { FaLinkedin } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'
 import { FaInstagram } from 'react-icons/fa'
+import dynamic from 'next/dynamic'
+
+const LightDarkToggle = dynamic(() => import('../ui/light-dark-toggle'), {
+  ssr: false,
+})
 
 const list = {
   hidden: { opacity: 0 },
@@ -33,7 +38,7 @@ export function Footer() {
     },
   ]
   return (
-    <footer className="fixed bottom-0 left-0 w-full bg-gradient-to-t from-white via-white/80 via-80% to-transparent py-6 dark:from-black dark:via-black/50 dark:via-50%">
+    <footer className="dark:from-dark dark:via-dark/80 fixed bottom-0 left-0 w-full bg-gradient-to-t from-white via-white/80 via-80% to-transparent py-6 dark:via-50%">
       <motion.div
         className="container mx-auto flex gap-4"
         initial="hidden"
@@ -61,6 +66,7 @@ export function Footer() {
             {link.icon}
           </motion.a>
         ))}
+        <LightDarkToggle />
       </motion.div>
     </footer>
   )

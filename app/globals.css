@@ -2,6 +2,11 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --color-dark: #0f0f0f;
+  --color-light: #f0f0f0;
+}
+
 @utility container {
   margin-inline: auto;
   padding-inline: 2rem;
@@ -28,5 +33,13 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
+  }
+  html {
+    background-color: var(--color-white);
+    color: var(--color-dark);
+  }
+  html.dark {
+    background-color: var(--color-dark);
+    color: var(--color-light);
   }
 }
