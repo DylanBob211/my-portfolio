@@ -5,6 +5,7 @@ export type Dictionary = {
     title: string
     description: string
     jobTitle: string
+    keywords: string
   }
   services: {
     webappDevelopment: { title: string; description: string }

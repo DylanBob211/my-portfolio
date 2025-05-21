@@ -22,6 +22,7 @@ export async function generateMetadata({
       template: `%s | ${dict.meta.title}`,
       default: dict.meta.title,
     },
+    keywords: dict.meta.keywords,
     description: dict.meta.description,
     alternates: {
       canonical: 'https://nicoladoronzo.xyz',
