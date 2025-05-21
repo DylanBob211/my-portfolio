@@ -21,6 +21,7 @@
     "cta": "Scrivimi!"
   },
   "contact": {
+    "introduction": "Per richieste, preventivi o consulenze, usa il form qui sotto. Ti risponderò il prima possibile.",
     "nameLabel": "Nome",
     "namePlaceholder": "Inserisci il tuo nome",
     "emailLabel": "Email",
@@ -33,7 +34,7 @@
     "emailLoading": "Invio in corso"
   },
   "homepage": {
-    "introduction": "Sono uno sviluppatore web full-stack con un focus sul front-end. Adoro realizzare esperienze web visivamente coinvolgenti e amo l'arte generativa.",
+    "introduction": "Sono uno sviluppatore web full-stack, specializzato nella creazione di siti web moderni e applicazioni web interattive. Adoro realizzare esperienze web visivamente coinvolgenti e amo l'arte generativa.",
     "cta": "Ecco cosa faccio"
   },
   "nav": {

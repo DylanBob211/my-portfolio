@@ -16,6 +16,7 @@ export default async function Contact({
 
   return (
     <main className="sm:w-2/5 lg:w-1/4">
+      <p className="mb-4">{dict.contact.introduction}</p>
       <ContactForm dict={dict} />
     </main>
   )

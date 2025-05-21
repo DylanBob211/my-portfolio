@@ -21,6 +21,7 @@
     "cta": "Hire me!"
   },
   "contact": {
+    "introduction": "Use the form below to request a quote or consultation. I’ll get back to you shortly.",
     "nameLabel": "Your Name",
     "namePlaceholder": "Enter your name",
     "emailLabel": "Your Email",

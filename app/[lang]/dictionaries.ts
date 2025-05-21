@@ -14,6 +14,7 @@ export type Dictionary = {
     cta: string
   }
   contact: {
+    introduction: string
     nameLabel: string
     namePlaceholder: string
     emailLabel: string
