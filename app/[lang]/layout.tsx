@@ -53,7 +53,7 @@ export default async function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Background />
           <div className="relative container mx-auto min-h-screen bg-transparent">
-            <Header dict={dict} />
+            <Header dict={dict} lang={(await params).lang} />
             <main className="pt-40 pb-26 lg:pt-46 lg:pb-20 lg:text-lg">
               {children}
             </main>

@@ -29,7 +29,13 @@ const listItem = {
   show: { opacity: 1, y: 0 },
 }
 
-export default function Header({ dict }: { dict: Dictionary }) {
+export default function Header({
+  dict,
+  lang,
+}: {
+  dict: Dictionary
+  lang: 'it' | 'en'
+}) {
   const navItems = [
     { name: dict.nav.about, path: '' },
     { name: dict.nav.services, path: '/services' },
@@ -49,13 +55,20 @@ export default function Header({ dict }: { dict: Dictionary }) {
             <NextLink href={`/${locale}`}>Nicola D&apos;Oronzo</NextLink>
           </motion.h1>
           <motion.div
-            className="ml-auto flex gap-4"
+            className="ml-auto flex flex-col items-center gap-6 sm:flex-row"
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeInOut', delay: 0.8 }}
           >
             <LightDarkToggle />
             <LangsToggle />
+            <a
+              className="cursor-pointer text-gray-700 transition duration-300 hover:scale-105 hover:text-gray-500 active:scale-95 dark:text-white dark:hover:text-gray-100"
+              target="_blank"
+              href={`/CV-${lang}.pdf`}
+            >
+              CV
+            </a>
           </motion.div>
         </div>
         <motion.h2
