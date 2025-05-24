@@ -45,7 +45,7 @@ export default function Header({
   return (
     <header className="dark:from-dark dark:via-dark/80 fixed top-0 left-0 w-full bg-gradient-to-b from-white via-white/90 via-80% to-transparent pt-6 pb-10">
       <div className="container mx-auto">
-        <div className="flex">
+        <div className="relative">
           <motion.h1
             className="text-3xl font-bold lg:text-6xl"
             initial={{ opacity: 0, y: 5 }}
@@ -55,7 +55,7 @@ export default function Header({
             <NextLink href={`/${locale}`}>Nicola D&apos;Oronzo</NextLink>
           </motion.h1>
           <motion.div
-            className="ml-auto flex flex-col items-center gap-6 sm:flex-row"
+            className="absolute top-0 right-0 ml-auto flex flex-col items-center gap-6 sm:flex-row"
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: 'easeInOut', delay: 0.8 }}
