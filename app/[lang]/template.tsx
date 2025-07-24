@@ -1,9 +1,13 @@
 'use client'
 import { motion } from 'motion/react'
 import { usePathname } from 'next/navigation'
+import { useEffect } from 'react'
 
 export default function Template({ children }: { children: React.ReactNode }) {
   const path = usePathname()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [path])
   return (
     <motion.div
       key={path}
