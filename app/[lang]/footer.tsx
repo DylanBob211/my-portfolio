@@ -25,7 +25,7 @@ export function Footer() {
     },
     {
       icon: <FaGithub size="24" />,
-      href: 'https://github.com/NicolaDoronzo',
+      href: 'https://github.com/DylanBob211',
     },
     {
       icon: <FaInstagram size="24" />,
