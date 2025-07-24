@@ -40,6 +40,23 @@
   "nav": {
     "about": "Chi sono",
     "services": "Servizi",
+    "portfolio": "Portfolio",
     "contact": "Contatti"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "filterPlaceholder": "Filtra per tecnologie",
+    "allProjects": "Tutti i Progetti",
+    "professional": "Progetti Professionali",
+    "personal": "Progetti Personali",
+    "technologies": "Tecnologie",
+    "role": "Ruolo",
+    "period": "Periodo",
+    "results": "Risultati",
+    "ongoing": "in corso",
+    "showMoreTechnologies": "Mostra più tecnologie",
+    "showLessTechnologies": "Mostra meno tecnologie",
+    "clearFilters": "Cancella filtri",
+    "noProjectsFound": "Nessun progetto trovato con le tecnologie selezionate."
   }
 }

@@ -33,7 +33,24 @@ export type Dictionary = {
   nav: {
     about: string
     services: string
+    portfolio: string
     contact: string
+  }
+  portfolio: {
+    title: string
+    filterPlaceholder: string
+    allProjects: string
+    professional: string
+    personal: string
+    technologies: string
+    role: string
+    period: string
+    results: string
+    ongoing: string
+    showMoreTechnologies: string
+    showLessTechnologies: string
+    clearFilters: string
+    noProjectsFound: string
   }
 }
 

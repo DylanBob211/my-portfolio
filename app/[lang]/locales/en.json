@@ -40,6 +40,23 @@
   "nav": {
     "about": "About",
     "services": "Services",
+    "portfolio": "Portfolio",
     "contact": "Contact"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "filterPlaceholder": "Filter by technologies",
+    "allProjects": "All Projects",
+    "professional": "Professional Projects",
+    "personal": "Personal Projects",
+    "technologies": "Technologies",
+    "role": "Role",
+    "period": "Period",
+    "results": "Results",
+    "ongoing": "ongoing",
+    "showMoreTechnologies": "Show more technologies",
+    "showLessTechnologies": "Show less technologies",
+    "clearFilters": "Clear filters",
+    "noProjectsFound": "No projects found with the selected technologies."
   }
 }

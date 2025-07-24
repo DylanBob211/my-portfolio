@@ -1,0 +1,428 @@
+{
+  "professional": [
+    {
+      "id": "financial-conditions",
+      "period": {
+        "start": "2023-10",
+        "end": "2025-06"
+      },
+      "title": {
+        "it": "Gestione condizioni economiche – Cliente bancario",
+        "en": "Financial Conditions Management – Banking Client"
+      },
+      "role": {
+        "it": "Front-end Lead",
+        "en": "Front-end Lead"
+      },
+      "description": {
+        "it": "Applicazione interna per la gestione delle condizioni economiche dei prodotti finanziari in ambito bancario. Ho sviluppato elementi fondamentali dell'interfaccia, guidato le scelte tecniche e strategiche, gestito colleghi e interagito con manager e stakeholder. Ho curato l'onboarding di diversi junior.",
+        "en": "Internal application for managing the financial conditions of banking products. I developed core UI components, led strategic and technical decisions, managed colleagues, and liaised with managers and stakeholders. I also handled onboarding for several junior developers."
+      },
+      "results": {
+        "it": "13 rilasci in produzione in 3 anni, pochissimi bug, codice pulito e mantenibile, alta produttività e continuo miglioramento del tooling.",
+        "en": "13 production releases in 3 years, minimal bugs, clean and maintainable codebase, high productivity, and continuous tooling improvements."
+      },
+      "technologies": ["Angular", "TypeScript", "Git", "Bitbucket"]
+    },
+    {
+      "id": "lole-dashboard",
+      "period": {
+        "start": "2024-06",
+        "end": "ongoing"
+      },
+      "title": {
+        "it": "Dashboard per servizi sociali – Organizzazione no profit",
+        "en": "Dashboard for Social Services – Non-profit Organization"
+      },
+      "role": {
+        "it": "Full-stack developer",
+        "en": "Full-stack Developer"
+      },
+      "description": {
+        "it": "Applicazione dashboard accessibile per il coordinamento dei servizi sociali. Ho curato lo sviluppo full-stack da zero, gestito uno sviluppatore junior e gestito i rapporti con il cliente.",
+        "en": "Accessible dashboard application for coordinating social services. I led the full-stack development from scratch, managed a junior developer, and handled client communication."
+      },
+      "results": {
+        "it": "Proof of Concept stabile e accessibile, portato all'adozione di Next.js, ottenuti ulteriori investimenti dal cliente.",
+        "en": "Stable and accessible Proof of Concept, transition to Next.js, and additional client investment secured."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Next.js",
+        "tRPC",
+        "Node.js",
+        "Nest.js",
+        "MongoDB",
+        "Playwright",
+        "Git",
+        "Bitbucket"
+      ]
+    },
+    {
+      "id": "jarvis-optical",
+      "period": {
+        "start": "2024-02",
+        "end": "ongoing"
+      },
+      "title": {
+        "it": "Applicazione per calcolo ottico – Cliente in ambito ottico",
+        "en": "Optical Parameter Calculation App – Optics Client"
+      },
+      "role": {
+        "it": "Full-stack developer",
+        "en": "Full-stack Developer"
+      },
+      "description": {
+        "it": "Applicazione per calcolo parametri ottici. Subentrato dopo l'uscita del team precedente, ho riprogettato l'intero stack e ristabilito un rapporto di fiducia col cliente.",
+        "en": "Application for calculating optical parameters. Took over after the previous team left, redesigned the full stack, and re-established client trust."
+      },
+      "results": {
+        "it": "Cliente riconquistato e progetto rilanciato con ulteriori sviluppi.",
+        "en": "Client reconfirmed and project extended with new developments."
+      },
+      "technologies": [
+        "Angular",
+        "C#",
+        ".NET",
+        "Azure Functions",
+        "MongoDB",
+        "Git",
+        "Azure DevOps"
+      ]
+    },
+    {
+      "id": "statistical-data-viz",
+      "period": {
+        "start": "2023-09",
+        "end": "2024-02"
+      },
+      "title": {
+        "it": "Visualizzazione dati statistici – Ente pubblico",
+        "en": "Statistical Data Visualization – Public Institution"
+      },
+      "role": {
+        "it": "Front-end Lead",
+        "en": "Front-end Lead"
+      },
+      "description": {
+        "it": "Applicazione pubblica per visualizzazione dati statistici. Subentrato in fase critica, ho completato il lavoro coordinando un team junior e adeguando il tooling.",
+        "en": "Public web application for visualizing statistical data. Took over a troubled project, completed it successfully while coordinating a junior team and improving the development tooling."
+      },
+      "results": {
+        "it": "Progetto completato con successo, il cliente ha richiesto ulteriori sviluppi.",
+        "en": "Successfully delivered, leading to further client requests."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "MUI",
+        "Next.js",
+        "Redux",
+        "Cypress",
+        "GitHub",
+        "Git"
+      ]
+    },
+    {
+      "id": "credit-line-management",
+      "period": {
+        "start": "2023-01",
+        "end": "2023-09"
+      },
+      "title": {
+        "it": "Gestione linee di credito – Multinazionale bancaria",
+        "en": "Credit Line Management – Banking Corporation"
+      },
+      "role": {
+        "it": "Front-end Developer",
+        "en": "Front-end Developer"
+      },
+      "description": {
+        "it": "Gestione linee di credito in ambito bancario. Ho lavorato alla manutenzione e al refactoring dell'applicazione, aggiornandola a una versione più recente di Angular.",
+        "en": "Internal banking app for managing credit lines. Maintained and refactored the application, migrated it to a newer Angular version."
+      },
+      "results": {
+        "it": "Sviluppi rapidi, nessun bug in produzione.",
+        "en": "Fast deliveries, no bugs in production."
+      },
+      "technologies": ["Angular", "TypeScript", "SVN", "GitHub"]
+    },
+    {
+      "id": "template-document-search",
+      "period": {
+        "start": "2022-07",
+        "end": "2025-02"
+      },
+      "title": {
+        "it": "Template e ricerca documenti – Cliente finanziario",
+        "en": "Template and Document Search – Financial Client"
+      },
+      "role": {
+        "it": "Front-end developer",
+        "en": "Front-end Developer"
+      },
+      "description": {
+        "it": "Template Angular per applicazioni web nel settore finanziario. Ho sviluppato e successivamente mantenuto l'applicazione basata su quel template.",
+        "en": "Angular template for web apps in the financial sector, later used as the base for a production application."
+      },
+      "results": {
+        "it": "L'applicazione è andata in produzione senza bug.",
+        "en": "Production-ready with zero bugs."
+      },
+      "technologies": [
+        "Angular",
+        "Angular Material",
+        "Jest",
+        "Angular Testing Library",
+        "GitHub",
+        "Git"
+      ]
+    },
+    {
+      "id": "insurance-app-suite",
+      "period": {
+        "start": "2021-04",
+        "end": "2023-10"
+      },
+      "title": {
+        "it": "Parco applicativo interno – Multinazionale assicurativa",
+        "en": "Internal App Suite – Insurance Corporation"
+      },
+      "role": {
+        "it": "Front-end Developer",
+        "en": "Front-end Developer"
+      },
+      "description": {
+        "it": "Parco applicativo in ambito assicurativo. Ho sviluppato nuove funzionalità, effettuato refactoring e aggiornato costantemente le versioni Angular.",
+        "en": "Wide application suite for insurance operations. Developed new features, performed refactoring, and kept Angular versions up-to-date."
+      },
+      "results": {
+        "it": "Maggiore produttività e performance, migliorata la qualità del codice.",
+        "en": "Boosted productivity and performance, improved code quality."
+      },
+      "technologies": [
+        "Angular",
+        "TypeScript",
+        "NgRx",
+        "Jest",
+        "Angular Testing Library",
+        "Git",
+        "GitHub"
+      ]
+    },
+    {
+      "id": "react-app-enhancements",
+      "period": {
+        "start": "2021-01",
+        "end": "2021-04"
+      },
+      "title": {
+        "it": "Evolutive su app React – Compagnia di investimenti",
+        "en": "React App Enhancements – Investment Company"
+      },
+      "role": {
+        "it": "Front-end Developer",
+        "en": "Front-end Developer"
+      },
+      "description": {
+        "it": "Bugfixing e piccole evolutive su applicazione React.",
+        "en": "Bug fixing and minor feature development on a React-based application."
+      },
+      "results": {
+        "it": "Risoluzione problemi rapida senza ulteriore impegno di risorse.",
+        "en": "Timely problem resolution with minimal resources."
+      },
+      "technologies": ["React", "Git", "TFS"]
+    },
+    {
+      "id": "internet-banking",
+      "period": {
+        "start": "2020-11",
+        "end": "2021-04"
+      },
+      "title": {
+        "it": "Applicazione Internet Banking – Cliente bancario",
+        "en": "Internet Banking Application – Banking Client"
+      },
+      "role": {
+        "it": "Junior Front-end Developer",
+        "en": "Junior Front-end Developer"
+      },
+      "description": {
+        "it": "Sviluppo di funzionalità frontend per l'Internet Banking.",
+        "en": "Front-end development for an internet banking platform."
+      },
+      "results": {
+        "it": "Applicazione in produzione.",
+        "en": "Application went live in production."
+      },
+      "technologies": ["Angular", "TypeScript", "Git", "Bitbucket"]
+    },
+    {
+      "id": "design-system-library",
+      "period": {
+        "start": "2020-02",
+        "end": "2020-11"
+      },
+      "title": {
+        "it": "Libreria design system – Cliente bancario",
+        "en": "Design System Library – Banking Client"
+      },
+      "role": {
+        "it": "Junior Front-end Developer",
+        "en": "Junior Front-end Developer"
+      },
+      "description": {
+        "it": "Sviluppo di libreria componenti e interfaccia frontend su progetto greenfield.",
+        "en": "Development of a component library and front-end for a greenfield banking application."
+      },
+      "results": {
+        "it": "Applicazione utilizzata in produzione, componenti riusati da altri team.",
+        "en": "Used in production, components reused across other teams."
+      },
+      "technologies": ["Angular", "TypeScript"]
+    },
+    {
+      "id": "medical-device-mvp",
+      "period": {
+        "start": "2022-01",
+        "end": "2022-09"
+      },
+      "title": {
+        "it": "MVP gestione dispositivi medici – Cliente healthcare",
+        "en": "Medical Device Management MVP – Healthcare Client"
+      },
+      "role": {
+        "it": "Front-end Developer",
+        "en": "Front-end Developer"
+      },
+      "description": {
+        "it": "MVP per la gestione di dispositivi medici.",
+        "en": "MVP for managing medical devices."
+      },
+      "results": {
+        "it": "MVP completato e validato dal cliente, con richiesta di ulteriori sviluppi.",
+        "en": "Successfully validated MVP, leading to additional development phases."
+      },
+      "technologies": [
+        "Angular",
+        "TypeScript",
+        "Go",
+        "Firebase",
+        "Terraform",
+        "GCP",
+        "Git",
+        "GitHub"
+      ]
+    }
+  ],
+  "personal": [
+    {
+      "id": "nicoladoronzo-xyz",
+      "period": {
+        "start": "2025-04",
+        "end": "ongoing"
+      },
+      "title": {
+        "it": "nicoladoronzo.xyz",
+        "en": "nicoladoronzo.xyz"
+      },
+      "role": {
+        "it": "Full-stack developer",
+        "en": "Full-stack Developer"
+      },
+      "description": {
+        "it": "Sviluppo del mio sito personale.",
+        "en": "My personal website."
+      },
+      "results": {
+        "it": "In corso, obiettivo: migliorare la SEO e posizionamento.",
+        "en": "Ongoing project with goals focused on SEO and ranking improvements."
+      },
+      "technologies": ["React", "Next.js", "TypeScript", "Git", "GitHub"]
+    },
+    {
+      "id": "gas06124",
+      "period": {
+        "start": "2024-09",
+        "end": "ongoing"
+      },
+      "title": {
+        "it": "GAS06124",
+        "en": "GAS06124"
+      },
+      "role": {
+        "it": "Full-stack developer",
+        "en": "Full-stack Developer"
+      },
+      "description": {
+        "it": "Applicazione per la gestione di un gruppo di acquisto solidale locale.",
+        "en": "Application for managing a local solidarity purchasing group."
+      },
+      "results": {
+        "it": "In uso, ha ridotto errori umani e semplificato la gestione degli ordini.",
+        "en": "Actively used, reduces human error and simplifies order management."
+      },
+      "technologies": [
+        "React",
+        "TypeScript",
+        "React Router",
+        "Remix",
+        "Node.js",
+        "Nest.js",
+        "MongoDB",
+        "Git",
+        "GitHub"
+      ]
+    },
+    {
+      "id": "budget-life",
+      "period": {
+        "start": "2024-01",
+        "end": "2024-06"
+      },
+      "title": {
+        "it": "Budget life",
+        "en": "Budget Life"
+      },
+      "role": {
+        "it": "Full-stack developer",
+        "en": "Full-stack Developer"
+      },
+      "description": {
+        "it": "Applicazione per la gestione delle spese e incassi, con categorizzazione automatica.",
+        "en": "App to track expenses and income, with automatic categorization."
+      },
+      "results": {
+        "it": "Ottima esperienza nell'apprendimento della programmazione funzionale e strutture dati complesse.",
+        "en": "Gained strong experience in functional programming and complex data structures."
+      },
+      "technologies": ["Elm"]
+    },
+    {
+      "id": "deps-tree",
+      "period": {
+        "start": "2023-04",
+        "end": "2023-12"
+      },
+      "title": {
+        "it": "Deps tree",
+        "en": "Deps tree"
+      },
+      "role": {
+        "it": "Full-stack developer",
+        "en": "Full-stack Developer"
+      },
+      "description": {
+        "it": "Strumento per visualizzare le dipendenze di un progetto JS come un meraviglioso albero tridimensionale.",
+        "en": "Tool that visualizes a JS project's dependencies as a wonderful 3D tree."
+      },
+      "results": {
+        "it": "Esperienza formativa nella grafica 3D con JavaScript.",
+        "en": "Solid learning experience in 3D graphics with JavaScript."
+      },
+      "technologies": ["Three.js", "Node.js", "Express"]
+    }
+  ]
+}

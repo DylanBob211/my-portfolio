@@ -17,7 +17,7 @@ const list = {
     opacity: 1,
     transition: {
       duration: 1,
-      ease: 'easeInOut',
+      ease: [0.4, 0, 0.2, 1] as [number, number, number, number],
       delay: 0.4,
       staggerChildren: 0.2,
     },
@@ -39,6 +39,7 @@ export default function Header({
   const navItems = [
     { name: dict.nav.about, path: '' },
     { name: dict.nav.services, path: '/services' },
+    { name: dict.nav.portfolio, path: '/portfolio' },
     { name: dict.nav.contact, path: '/contact' },
   ]
   const locale = useCurrentLocale()
@@ -50,7 +51,7 @@ export default function Header({
             className="text-3xl font-bold lg:text-6xl"
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: 'easeInOut' }}
+            transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
           >
             <NextLink href={`/${locale}`}>Nicola D&apos;Oronzo</NextLink>
           </motion.h1>
@@ -58,7 +59,7 @@ export default function Header({
             className="absolute top-0 right-0 ml-auto flex flex-col items-center gap-6 sm:flex-row"
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: 'easeInOut', delay: 0.8 }}
+            transition={{ duration: 1, ease: [0.4, 0, 0.2, 1], delay: 0.8 }}
           >
             <LightDarkToggle />
             <LangsToggle />
@@ -75,7 +76,7 @@ export default function Header({
           className="mb-4 text-lg font-semibold lg:text-2xl"
           initial={{ opacity: 0, y: 5 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: 'easeInOut', delay: 0.2 }}
+          transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
         >
           Web developer
         </motion.h2>
