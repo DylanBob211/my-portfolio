@@ -16,7 +16,7 @@ export default async function Portfolio({
   const dict = await getDictionary(resolvedParams.lang)
 
   return (
-    <div className="mx-auto w-full max-w-6xl">
+    <div className="mx-auto w-full max-w-6xl pt-4">
       <PortfolioClient
         dict={dict}
         portfolioData={portfolioData}

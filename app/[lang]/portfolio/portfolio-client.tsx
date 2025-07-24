@@ -141,7 +141,8 @@ export default function PortfolioClient({
 
   // Calculate how many technologies to show in the first row
   // Estimate based on typical button width and container width
-  const technologiesPerRow = 8 // Adjust based on your typical technology name lengths
+  const technologiesPerRow =
+    typeof window !== 'undefined' && window.innerWidth < 640 ? 4 : 8 // 640px = 40rem, mobile vs desktop
   const visibleTechnologies = showAllTechnologies
     ? allTechnologies
     : allTechnologies.slice(0, technologiesPerRow)
@@ -163,7 +164,7 @@ export default function PortfolioClient({
           <button
             key={section.key}
             onClick={() => setActiveSection(section.key)}
-            className={`rounded-lg border px-4 py-2 transition-all duration-200 ${
+            className={`rounded-lg border px-2 py-1 text-sm transition-all duration-200 ${
               activeSection === section.key
                 ? 'border-black bg-black text-white'
                 : 'border-gray-300 bg-white text-black hover:border-gray-500'
