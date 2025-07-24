@@ -422,7 +422,7 @@
         "it": "Esperienza formativa nella grafica 3D con JavaScript.",
         "en": "Solid learning experience in 3D graphics with JavaScript."
       },
-      "technologies": ["Three.js", "Node.js", "Express"]
+      "technologies": ["JavaScript", "Three.js", "Node.js", "Express"]
     }
   ]
 }
