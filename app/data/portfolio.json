@@ -180,6 +180,39 @@
       ]
     },
     {
+      "id": "medical-device-mvp",
+      "period": {
+        "start": "2022-01",
+        "end": "2022-09"
+      },
+      "title": {
+        "it": "MVP gestione dispositivi medici – Cliente healthcare",
+        "en": "Medical Device Management MVP – Healthcare Client"
+      },
+      "role": {
+        "it": "Front-end Developer",
+        "en": "Front-end Developer"
+      },
+      "description": {
+        "it": "MVP per la gestione di dispositivi medici.",
+        "en": "MVP for managing medical devices."
+      },
+      "results": {
+        "it": "MVP completato e validato dal cliente, con richiesta di ulteriori sviluppi.",
+        "en": "Successfully validated MVP, leading to additional development phases."
+      },
+      "technologies": [
+        "Angular",
+        "TypeScript",
+        "Go",
+        "Firebase",
+        "Terraform",
+        "GCP",
+        "Git",
+        "GitHub"
+      ]
+    },
+    {
       "id": "insurance-app-suite",
       "period": {
         "start": "2021-04",
@@ -282,39 +315,6 @@
         "en": "Used in production, components reused across other teams."
       },
       "technologies": ["Angular", "TypeScript"]
-    },
-    {
-      "id": "medical-device-mvp",
-      "period": {
-        "start": "2022-01",
-        "end": "2022-09"
-      },
-      "title": {
-        "it": "MVP gestione dispositivi medici – Cliente healthcare",
-        "en": "Medical Device Management MVP – Healthcare Client"
-      },
-      "role": {
-        "it": "Front-end Developer",
-        "en": "Front-end Developer"
-      },
-      "description": {
-        "it": "MVP per la gestione di dispositivi medici.",
-        "en": "MVP for managing medical devices."
-      },
-      "results": {
-        "it": "MVP completato e validato dal cliente, con richiesta di ulteriori sviluppi.",
-        "en": "Successfully validated MVP, leading to additional development phases."
-      },
-      "technologies": [
-        "Angular",
-        "TypeScript",
-        "Go",
-        "Firebase",
-        "Terraform",
-        "GCP",
-        "Git",
-        "GitHub"
-      ]
     }
   ],
   "personal": [

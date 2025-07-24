@@ -1,7 +1,7 @@
 import FancyButton from '@/app/ui/fancy-button'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { FaCss3, FaWordpressSimple } from 'react-icons/fa'
+import { FaCss3, FaHtml5 } from 'react-icons/fa'
 import { FaComputer } from 'react-icons/fa6'
 import { FiDatabase } from 'react-icons/fi'
 import { RiReactjsLine } from 'react-icons/ri'
@@ -45,7 +45,7 @@ export default async function Services({
       <Article.Container>
         <div className="flex items-center gap-2">
           <FaCss3 size="24" />
-          <FaWordpressSimple size="24" />
+          <FaHtml5 size="24" />
         </div>
         <Article.Title>{dict.services.websitesDevelopment.title}</Article.Title>
         <Article.Paragraph>
