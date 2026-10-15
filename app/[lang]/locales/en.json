@@ -29,9 +29,9 @@
     "messageLabel": "Message",
     "messagePlaceholder": "Enter your message",
     "submitButton": "Send Message",
-    "emailSent": "Grazie per avermi scritto!",
-    "emailGenericError": "Qualcosa è andato storto",
-    "emailLoading": "Invio in corso"
+    "emailSent": "Thanks for your message!",
+    "emailGenericError": "Something went wrong",
+    "emailLoading": "Sending…"
   },
   "homepage": {
     "introduction": "I'm a software engineer with a front-end focus, taking web products from requirements and UX through to delivery. Lately I've been building AI applications and agentic interfaces, including creative ones where people and agents make music and visuals together.",

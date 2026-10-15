@@ -1,7 +1,14 @@
 'use client'
 
-import { forwardRef, ReactNode, useActionState } from 'react'
+import {
+  forwardRef,
+  ReactNode,
+  useActionState,
+  useEffect,
+  useState,
+} from 'react'
 import { Dictionary } from '../dictionaries'
+import issueFormToken from './actions/issueFormToken'
 import sendEmail from './actions/sendEmail'
 import {
   AnimatePresence,
@@ -87,8 +94,12 @@ const ActionButton = forwardRef<
 
 export function ContactForm({ dict }: { dict: Dictionary }) {
   const [state, dispatch, isPending] = useActionState(sendEmail, null)
-  const isError = !!state?.error
-  const isSuccess = !!state?.data
+  const [token, setToken] = useState<string | null>(null)
+  useEffect(() => {
+    issueFormToken().then(setToken, () => setToken(null))
+  }, [])
+  const isError = state?.ok === false
+  const isSuccess = state?.ok === true
   const actionState = isPending
     ? 'pending'
     : isError
@@ -98,7 +109,23 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
         : 'default'
   return (
     <>
-      <form action={dispatch} className="flex flex-col gap-4">
+      <form action={dispatch} className="relative flex flex-col gap-4">
+        <input type="hidden" name="token" value={token ?? ''} />
+        {/* Honeypot: invisible to people, tempting to bots */}
+        <div
+          aria-hidden="true"
+          className="absolute -left-[9999px] h-px w-px overflow-hidden"
+        >
+          <label>
+            Website
+            <input
+              type="text"
+              name="website"
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </label>
+        </div>
         <label className="flex flex-col">
           <span>{dict.contact.nameLabel}</span>
           <input
@@ -135,6 +162,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
           errorContent={dict.contact.emailGenericError}
           successContent={dict.contact.emailSent}
           defaultContent={dict.contact.submitButton}
+          disabled={!token || isPending}
           type="submit"
         />
       </form>
