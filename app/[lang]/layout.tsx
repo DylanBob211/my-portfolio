@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
 import '../globals.css'
 import Background from '../ui/background'
-import { asLocale, getDictionary } from './dictionaries'
+import { getDictionary } from './dictionaries'
 import Header from './header'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
@@ -53,7 +53,7 @@ export default async function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Background />
           <div className="relative container mx-auto min-h-screen bg-transparent">
-            <Header dict={dict} lang={asLocale(resolvedParams.lang)} />
+            <Header dict={dict} />
             <main className="pt-40 pb-26 lg:pt-46 lg:pb-20 lg:text-lg">
               {children}
             </main>
