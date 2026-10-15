@@ -27,16 +27,16 @@
         "end": "ongoing"
       },
       "title": {
-        "it": "Piattaforma di prenotazione",
-        "en": "Booking Platform"
+        "it": "Piattaforma di prenotazione alberghiera",
+        "en": "Hotel Booking Platform"
       },
       "role": {
         "it": "Full-stack developer e UX",
         "en": "Full-stack Developer & UX"
       },
       "description": {
-        "it": "Sito pubblico di prenotazione e back-office amministrativo collegati a un backend REST. Ho progettato la UX e sviluppato entrambi, con attenzione all'accessibilità e a percorsi utente intuitivi.",
-        "en": "Public booking website and administrative back-office connected to a REST backend. I designed the UX and built both, with a focus on accessibility and intuitive user journeys."
+        "it": "Piattaforma di prenotazione alberghiera composta da un sito pubblico, dove gli ospiti prenotano il soggiorno, e da un back-office amministrativo per la gestione delle prenotazioni, entrambi collegati a un backend REST. Ho progettato la UX e sviluppato entrambi, con attenzione all'accessibilità e a percorsi utente intuitivi.",
+        "en": "Hotel booking platform made of a public website where guests book their stay and an administrative back-office for managing bookings, both connected to a REST backend. I designed the UX and built both, with a focus on accessibility and intuitive user journeys."
       },
       "technologies": [
         "Svelte",
@@ -372,13 +372,19 @@
         "it": "Sviluppo del mio sito personale.",
         "en": "My personal website."
       },
-      "technologies": ["React", "Next.js", "TypeScript", "Git", "GitHub"]
+      "technologies": ["React", "Next.js", "TypeScript", "Git", "GitHub"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/DylanBob211/my-portfolio"
+        }
+      ]
     },
     {
       "id": "gas06124",
       "period": {
         "start": "2024-09",
-        "end": "ongoing"
+        "end": "2025-07"
       },
       "title": {
         "it": "GAS06124",
@@ -422,7 +428,13 @@
         "it": "Applicazione per la gestione delle spese e incassi, con categorizzazione automatica.",
         "en": "App to track expenses and income, with automatic categorization."
       },
-      "technologies": ["Elm"]
+      "technologies": ["Elm"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/DylanBob211/budget-life"
+        }
+      ]
     },
     {
       "id": "deps-tree",
@@ -442,7 +454,13 @@
         "it": "Strumento per visualizzare le dipendenze di un progetto JS come un meraviglioso albero tridimensionale.",
         "en": "Tool that visualizes a JS project's dependencies as a wonderful 3D tree."
       },
-      "technologies": ["JavaScript", "Three.js", "Node.js", "Express"]
+      "technologies": ["JavaScript", "Three.js", "Node.js", "Express"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/DylanBob211/depstree"
+        }
+      ]
     }
   ],
   "teaching": [
@@ -465,6 +483,26 @@
         "en": "40-hour lab course for third-year Computer Science students covering JavaScript, browser internals, Node.js tooling and Angular, with hands-on activities and final exam grading."
       },
       "technologies": ["JavaScript", "Node.js", "Angular"]
+    },
+    {
+      "id": "web-development-academy",
+      "period": {
+        "start": "2023-04",
+        "end": "2023-04"
+      },
+      "title": {
+        "it": "Academy di sviluppo web – Percorso di formazione interno",
+        "en": "Web Development Academy – Internal training program"
+      },
+      "role": {
+        "it": "Responsabile e docente dell'academy",
+        "en": "Academy Lead & Instructor"
+      },
+      "description": {
+        "it": "Academy intensiva di un mese sullo sviluppo web, guidata da me per l'azienda in cui lavoravo, su fondamenti del web, JavaScript e Angular. Al termine del percorso i candidati migliori sono entrati in azienda.",
+        "en": "One-month intensive academy on web development that I led for the company I worked for, covering web fundamentals, JavaScript and Angular. The best candidates then joined the company."
+      },
+      "technologies": ["HTML", "CSS", "JavaScript", "Angular"]
     },
     {
       "id": "azure-ai-certification",

@@ -124,6 +124,7 @@ export default function PortfolioClient({
       const [year, month] = dateStr.split('-')
       return `${month}/${year}`
     }
+    if (start === end) return formatDate(start)
     return `${formatDate(start)} - ${formatDate(end)}`
   }
 
