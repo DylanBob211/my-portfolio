@@ -71,6 +71,7 @@ export default async function RootLayout({
               url: 'https://nicoladoronzo.xyz',
               sameAs: [
                 'https://www.linkedin.com/in/nicola-d-oronzo-1a88a4128',
+                'https://github.com/DylanBob211',
                 'https://github.com/NicolaDoronzo',
                 'https://www.instagram.com/nicola.doronzo/',
               ],

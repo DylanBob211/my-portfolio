@@ -18,7 +18,7 @@ export type Dictionary = {
   services: {
     webappDevelopment: { title: string; description: string }
     frontendDevelopment: { title: string; description: string }
-    websitesDevelopment: { title: string; description: string }
+    teaching: { title: string; description: string }
     cta: string
   }
   contact: {
