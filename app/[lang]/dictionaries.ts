@@ -1,4 +1,12 @@
 import 'server-only'
+import { notFound } from 'next/navigation'
+
+export type Locale = 'en' | 'it'
+
+export function asLocale(lang: string): Locale {
+  if (lang === 'en' || lang === 'it') return lang
+  notFound()
+}
 
 export type Dictionary = {
   meta: {
@@ -10,7 +18,7 @@ export type Dictionary = {
   services: {
     webappDevelopment: { title: string; description: string }
     frontendDevelopment: { title: string; description: string }
-    websitesDevelopment: { title: string; description: string }
+    teaching: { title: string; description: string }
     cta: string
   }
   contact: {
@@ -42,10 +50,10 @@ export type Dictionary = {
     allProjects: string
     professional: string
     personal: string
+    teaching: string
     technologies: string
     role: string
     period: string
-    results: string
     ongoing: string
     showMoreTechnologies: string
     showLessTechnologies: string
@@ -54,10 +62,10 @@ export type Dictionary = {
   }
 }
 
-const dictionaries: Record<'en' | 'it', () => Promise<Dictionary>> = {
+const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
   en: () => import('./locales/en.json').then((module) => module.default),
   it: () => import('./locales/it.json').then((module) => module.default),
 }
 
-export const getDictionary = async (locale: 'en' | 'it'): Promise<Dictionary> =>
-  dictionaries[locale]()
+export const getDictionary = async (locale: string): Promise<Dictionary> =>
+  dictionaries[asLocale(locale)]()

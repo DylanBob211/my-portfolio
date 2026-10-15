@@ -1,24 +1,24 @@
 {
   "meta": {
-    "title": "Nicola D'Oronzo - Sviluppatore Web Fullstack con sede a Perugia | Siti Web | Applicazioni Web - Angular, React, Javascript",
-    "description": "Sviluppatore web fullstack: applicazioni web, siti web e consulenza frontend. Contattami per dare vita al tuo progetto online.",
-    "jobTitle": "Sviluppatore Web, esperto e consulente di sviluppo Front-end",
-    "keywords": "sviluppatore web, Perugia, realizzazione siti web, applicazioni web, full-stack, front-end, freelance web developer, arte generativa"
+    "title": "Nicola D'Oronzo – Software Engineer a Perugia | Web, Angular, React, AI",
+    "description": "Software engineer a Perugia: applicazioni web full-stack, consulenza front-end, integrazione AI, formazione e mentoring.",
+    "jobTitle": "Software Engineer",
+    "keywords": "software engineer, Perugia, applicazioni web, full-stack, front-end, Angular, React, Svelte, integrazione AI, RAG, freelance, formazione, mentoring"
   },
   "services": {
     "webappDevelopment": {
-      "title": "Sviluppo Applicazioni Web",
-      "description": "Sono specializzato nello sviluppo di applicazioni web full-stack con un focus sull'aspetto frontend. Creo sia interfacce utente intuitive che sistemi back-end robusti. Utilizzo piattaforme cloud per realizzare applicazioni scalabili e affidabili, ottimizzando performance e disponibilità."
+      "title": "Sviluppo di applicazioni web",
+      "description": "Sviluppo applicazioni web full-stack dall'inizio alla fine, dai requisiti e la UX fino al rilascio. Quando porta un valore reale, integro funzionalità AI come chatbot basati sui tuoi documenti (RAG) e assistenti che lavorano con i tuoi sistemi esistenti."
     },
     "frontendDevelopment": {
-      "title": "Consulenza Sviluppo Front-end",
-      "description": "Lavoro da oltre 5 anni con i più recenti framework e librerie front-end, e fornisco consulenza qualificata per sviluppare interfacce utente scalabili, facili da mantenere e con performance elevate."
+      "title": "Consulenza front-end",
+      "description": "Anni di esperienza con Angular, React e Svelte. Aiuto i team a costruire interfacce scalabili, accessibili e facili da mantenere, e subentro in progetti in difficoltà per stabilizzarli e rimetterli in carreggiata."
     },
-    "websitesDevelopment": {
-      "title": "Sviluppo Siti Web",
-      "description": "Creo siti web su misura per le tue esigenze, spaziando da design semplici ed eleganti a piattaforme complesse e ricche di funzionalità. Che tu abbia bisogno di un blog personale, un portfolio o un sito web aziendale completamente personalizzato, garantisco un'esperienza utente fluida e un design responsivo."
+    "teaching": {
+      "title": "Formazione e mentoring",
+      "description": "Ho un'esperienza concreta nell'insegnamento dello sviluppo web e porto lo stesso approccio pratico nei team: workshop, onboarding di sviluppatori junior e mentoring tramite code review."
     },
-    "cta": "Scrivimi!"
+    "cta": "Contattami"
   },
   "contact": {
     "introduction": "Per richieste, preventivi o consulenze, usa il form qui sotto. Ti risponderò il prima possibile.",
@@ -34,8 +34,8 @@
     "emailLoading": "Invio in corso"
   },
   "homepage": {
-    "introduction": "Sono uno sviluppatore web full-stack, specializzato nella creazione di siti web moderni e applicazioni web interattive. Adoro realizzare esperienze web visivamente coinvolgenti e amo l'arte generativa.",
-    "cta": "Ecco cosa faccio"
+    "introduction": "Sono uno sviluppatore web con un focus sul front-end. Creo applicazioni web, dai requisiti fino al rilascio. Mi piacciono le esperienze web visivamente coinvolgenti e l'arte generativa.",
+    "cta": "Cosa faccio"
   },
   "nav": {
     "about": "Chi sono",
@@ -46,17 +46,17 @@
   "portfolio": {
     "title": "Portfolio",
     "filterPlaceholder": "Filtra per tecnologie",
-    "allProjects": "Tutti i Progetti",
-    "professional": "Progetti Professionali",
-    "personal": "Progetti Personali",
+    "allProjects": "Tutti",
+    "professional": "Progetti professionali",
+    "personal": "Progetti personali",
+    "teaching": "Insegnamento e certificazioni",
     "technologies": "Tecnologie",
     "role": "Ruolo",
     "period": "Periodo",
-    "results": "Risultati",
     "ongoing": "in corso",
     "showMoreTechnologies": "Mostra più tecnologie",
     "showLessTechnologies": "Mostra meno tecnologie",
-    "clearFilters": "Cancella filtri",
+    "clearFilters": "Rimuovi filtri",
     "noProjectsFound": "Nessun progetto trovato con le tecnologie selezionate."
   }
 }

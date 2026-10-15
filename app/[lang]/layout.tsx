@@ -12,7 +12,7 @@ const inter = Roboto({ subsets: ['latin'], weight: '300', style: 'normal' })
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: 'en' | 'it' }>
+  params: Promise<{ lang: string }>
 }): Promise<Metadata> {
   const resolvedParams = await params
   const dict = await getDictionary(resolvedParams.lang)
@@ -43,7 +43,7 @@ export default async function RootLayout({
   params,
 }: {
   children: React.ReactNode
-  params: Promise<{ lang: 'en' | 'it' }>
+  params: Promise<{ lang: string }>
 }) {
   const resolvedParams = await params
   const dict = await getDictionary(resolvedParams.lang)
@@ -53,7 +53,7 @@ export default async function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Background />
           <div className="relative container mx-auto min-h-screen bg-transparent">
-            <Header dict={dict} lang={(await params).lang} />
+            <Header dict={dict} />
             <main className="pt-40 pb-26 lg:pt-46 lg:pb-20 lg:text-lg">
               {children}
             </main>
@@ -71,6 +71,7 @@ export default async function RootLayout({
               url: 'https://nicoladoronzo.xyz',
               sameAs: [
                 'https://www.linkedin.com/in/nicola-d-oronzo-1a88a4128',
+                'https://github.com/DylanBob211',
                 'https://github.com/NicolaDoronzo',
                 'https://www.instagram.com/nicola.doronzo/',
               ],

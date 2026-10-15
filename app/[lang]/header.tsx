@@ -29,13 +29,7 @@ const listItem = {
   show: { opacity: 1, y: 0 },
 }
 
-export default function Header({
-  dict,
-  lang,
-}: {
-  dict: Dictionary
-  lang: 'it' | 'en'
-}) {
+export default function Header({ dict }: { dict: Dictionary }) {
   const navItems = [
     { name: dict.nav.about, path: '' },
     { name: dict.nav.services, path: '/services' },
@@ -63,13 +57,6 @@ export default function Header({
           >
             <LightDarkToggle />
             <LangsToggle />
-            <a
-              className="cursor-pointer text-gray-700 transition duration-300 hover:scale-105 hover:text-gray-500 active:scale-95 dark:text-white dark:hover:text-gray-100"
-              target="_blank"
-              href={`/CV-${lang}.pdf`}
-            >
-              CV
-            </a>
           </motion.div>
         </div>
         <motion.h2
@@ -78,7 +65,7 @@ export default function Header({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.4, 0, 0.2, 1] }}
         >
-          Web developer
+          Software Engineer
         </motion.h2>
 
         <nav>

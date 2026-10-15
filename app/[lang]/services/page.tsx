@@ -1,7 +1,7 @@
 import FancyButton from '@/app/ui/fancy-button'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { FaCss3, FaHtml5 } from 'react-icons/fa'
+import { FaChalkboardTeacher, FaUsers } from 'react-icons/fa'
 import { FaComputer } from 'react-icons/fa6'
 import { FiDatabase } from 'react-icons/fi'
 import { RiReactjsLine } from 'react-icons/ri'
@@ -9,16 +9,22 @@ import { SiAngular } from 'react-icons/si'
 import { Article } from '../../ui/article'
 import { getDictionary } from '../dictionaries'
 
-export const metadata: Metadata = {
-  title: 'Services',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+  const dict = await getDictionary((await params).lang)
+  return { title: dict.nav.services }
 }
 
 export default async function Services({
   params,
 }: {
-  params: Promise<{ lang: 'en' | 'it' }>
+  params: Promise<{ lang: string }>
 }) {
-  const dict = await getDictionary((await params).lang)
+  const { lang } = await params
+  const dict = await getDictionary(lang)
 
   return (
     <div className="sm:w-2/5">
@@ -44,17 +50,17 @@ export default async function Services({
       </Article.Container>
       <Article.Container>
         <div className="flex items-center gap-2">
-          <FaCss3 size="24" />
-          <FaHtml5 size="24" />
+          <FaChalkboardTeacher size="26" />
+          <FaUsers size="24" />
         </div>
-        <Article.Title>{dict.services.websitesDevelopment.title}</Article.Title>
+        <Article.Title>{dict.services.teaching.title}</Article.Title>
         <Article.Paragraph>
-          {dict.services.websitesDevelopment.description}
+          {dict.services.teaching.description}
         </Article.Paragraph>
       </Article.Container>
 
       <div className="mt-4">
-        <Link href="/contact" className="cursor-pointer font-bold">
+        <Link href={`/${lang}/contact`} className="cursor-pointer font-bold">
           <FancyButton>{dict.services.cta}</FancyButton>
         </Link>
       </div>

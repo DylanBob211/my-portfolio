@@ -1,24 +1,24 @@
 {
   "meta": {
-    "title": "Nicola D'Oronzo - Fullstack Web Developer based in Perugia | Websites | Webapps - Angular, React, Javascript",
-    "description": "Fullstack web developer: web applications, websites, and frontend consulting. Contact me to bring your online project to life.",
-    "jobTitle": "Web Developer, Front-end Specialist and Consultant",
-    "keywords": "web development, Perugia, websites, web applications, webapps, full-stack, front-end, freelance web developer, generative art"
+    "title": "Nicola D'Oronzo – Software Engineer in Perugia | Web, Angular, React, AI",
+    "description": "Software engineer based in Perugia: full-stack web applications, front-end consulting, AI integration, teaching and mentoring.",
+    "jobTitle": "Software Engineer",
+    "keywords": "software engineer, Perugia, web applications, full-stack, front-end, Angular, React, Svelte, AI integration, RAG, freelance, mentoring"
   },
   "services": {
     "webappDevelopment": {
-      "title": "Webapp Development",
-      "description": "I specialize in full-stack web application development with a focus on the frontend, building both intuitive user interfaces and robust back-end systems. I leverage cloud platforms to build scalable and reliable applications, optimizing performance and availability."
+      "title": "Web Application Development",
+      "description": "I build full-stack web applications end to end, from requirements and UX to delivery. When it adds real value, I integrate AI features such as document-based chatbots (RAG) and assistants that work with your existing systems."
     },
     "frontendDevelopment": {
-      "title": "Front-end Development Consulence",
-      "description": "With more than 5 years of experience in modern front-end frameworks and libraries, I provide expert guidance to help you build scalable, maintainable, and high-performance user interfaces."
+      "title": "Front-end Consulting",
+      "description": "Years of experience with Angular, React and Svelte. I help teams build interfaces that are scalable, accessible and easy to maintain, and I step into projects in trouble to stabilise them and bring them back on track."
     },
-    "websitesDevelopment": {
-      "title": "Websites Development",
-      "description": "I create websites tailored to your needs, ranging from simple, elegant designs to complex, feature-rich platforms. Whether you need a personal blog, a portfolio, or a fully customized business website, I ensure a seamless user experience and responsive design."
+    "teaching": {
+      "title": "Teaching & Mentoring",
+      "description": "I have real experience teaching web development, and I bring the same practical approach to teams: workshops, onboarding of junior developers and mentoring through code review."
     },
-    "cta": "Hire me!"
+    "cta": "Get in touch"
   },
   "contact": {
     "introduction": "Use the form below to request a quote or consultation. I’ll get back to you shortly.",
@@ -29,13 +29,13 @@
     "messageLabel": "Message",
     "messagePlaceholder": "Enter your message",
     "submitButton": "Send Message",
-    "emailSent": "Grazie per avermi scritto!",
-    "emailGenericError": "Qualcosa è andato storto",
-    "emailLoading": "Invio in corso"
+    "emailSent": "Thanks for your message!",
+    "emailGenericError": "Something went wrong",
+    "emailLoading": "Sending…"
   },
   "homepage": {
-    "introduction": "I'm a full-stack web developer with a front-end focus. I love realizing visually compelling web experiences and I love generative art.",
-    "cta": "Here is what i do"
+    "introduction": "I'm a software engineer with a front-end focus, taking web applications from requirements to delivery. I love building visually compelling web experiences, and I love generative art.",
+    "cta": "What I do"
   },
   "nav": {
     "about": "About",
@@ -46,13 +46,13 @@
   "portfolio": {
     "title": "Portfolio",
     "filterPlaceholder": "Filter by technologies",
-    "allProjects": "All Projects",
+    "allProjects": "All",
     "professional": "Professional Projects",
     "personal": "Personal Projects",
+    "teaching": "Teaching & Certifications",
     "technologies": "Technologies",
     "role": "Role",
     "period": "Period",
-    "results": "Results",
     "ongoing": "ongoing",
     "showMoreTechnologies": "Show more technologies",
     "showLessTechnologies": "Show less technologies",
