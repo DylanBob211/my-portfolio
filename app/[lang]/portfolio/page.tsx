@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { getDictionary } from '../dictionaries'
+import { asLocale, getDictionary } from '../dictionaries'
 import PortfolioClient from './portfolio-client'
 import portfolioData from '../../data/portfolio.json'
 
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default async function Portfolio({
   params,
 }: {
-  params: Promise<{ lang: 'en' | 'it' }>
+  params: Promise<{ lang: string }>
 }) {
   const resolvedParams = await params
   const dict = await getDictionary(resolvedParams.lang)
@@ -20,7 +20,7 @@ export default async function Portfolio({
       <PortfolioClient
         dict={dict}
         portfolioData={portfolioData}
-        lang={resolvedParams.lang}
+        lang={asLocale(resolvedParams.lang)}
       />
     </div>
   )

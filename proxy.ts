@@ -5,7 +5,7 @@ const PUBLIC_FILE = /\.(.*)$/
 const SUPPORTED_LOCALES = ['en', 'it']
 const DEFAULT_LOCALE = 'it'
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   // Skip public files and API routes

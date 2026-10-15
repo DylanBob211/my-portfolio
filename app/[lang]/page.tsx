@@ -5,7 +5,7 @@ import FancyButton from '../ui/fancy-button'
 export default async function Home({
   params,
 }: {
-  params: Promise<{ lang: 'en' | 'it' }>
+  params: Promise<{ lang: string }>
 }) {
   const resolvedParams = await params
   const dict = await getDictionary(resolvedParams.lang)

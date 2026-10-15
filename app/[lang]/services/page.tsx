@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default async function Services({
   params,
 }: {
-  params: Promise<{ lang: 'en' | 'it' }>
+  params: Promise<{ lang: string }>
 }) {
   const dict = await getDictionary((await params).lang)
 
