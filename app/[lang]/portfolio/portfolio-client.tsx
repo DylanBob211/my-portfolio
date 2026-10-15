@@ -4,35 +4,31 @@ import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Article } from '../../ui/article'
 
+type LocalizedText = {
+  it: string
+  en: string
+}
+
 type PortfolioItem = {
   id: string
-  period: {
+  period?: {
     start: string
     end: string
   }
-  title: {
-    it: string
-    en: string
-  }
-  role: {
-    it: string
-    en: string
-  }
-  description: {
-    it: string
-    en: string
-  }
-  results: {
-    it: string
-    en: string
-  }
-  technologies: string[]
+  title: LocalizedText
+  role: LocalizedText
+  description: LocalizedText
+  technologies?: string[]
+  links?: { label: string; url: string }[]
 }
 
 type PortfolioData = {
   professional: PortfolioItem[]
   personal: PortfolioItem[]
+  teaching: PortfolioItem[]
 }
+
+type Section = keyof PortfolioData | 'all'
 
 type Dictionary = {
   portfolio: {
@@ -41,10 +37,10 @@ type Dictionary = {
     allProjects: string
     professional: string
     personal: string
+    teaching: string
     technologies: string
     role: string
     period: string
-    results: string
     ongoing: string
     showMoreTechnologies: string
     showLessTechnologies: string
@@ -65,29 +61,26 @@ export default function PortfolioClient({
   lang,
 }: PortfolioClientProps) {
   const [selectedTechnologies, setSelectedTechnologies] = useState<string[]>([])
-  const [activeSection, setActiveSection] = useState<
-    'all' | 'professional' | 'personal'
-  >('all')
+  const [activeSection, setActiveSection] = useState<Section>('all')
   const [showAllTechnologies, setShowAllTechnologies] = useState(false)
 
   // Get all unique technologies
   const allTechnologies = useMemo(() => {
     const techSet = new Set<string>()
-    portfolioData.professional.forEach((item) =>
-      item.technologies.forEach((tech) => techSet.add(tech))
-    )
-    portfolioData.personal.forEach((item) =>
-      item.technologies.forEach((tech) => techSet.add(tech))
-    )
+    Object.values(portfolioData)
+      .flat()
+      .forEach((item) =>
+        item.technologies?.forEach((tech) => techSet.add(tech))
+      )
 
     const priorityTechnologies = [
       'Angular',
       'React',
+      'Svelte',
       'Next.js',
-      'React Router',
-      'Remix',
-      'Typescript',
+      'TypeScript',
       'C#',
+      '.NET',
       'Node.js',
     ]
 
@@ -104,15 +97,10 @@ export default function PortfolioClient({
 
   // Filter projects based on selected technologies and section
   const filteredProjects = useMemo(() => {
-    let allProjects: PortfolioItem[] = []
-
-    if (activeSection === 'all') {
-      allProjects = [...portfolioData.professional, ...portfolioData.personal]
-    } else if (activeSection === 'professional') {
-      allProjects = portfolioData.professional
-    } else {
-      allProjects = portfolioData.personal
-    }
+    const allProjects =
+      activeSection === 'all'
+        ? Object.values(portfolioData).flat()
+        : portfolioData[activeSection]
 
     if (selectedTechnologies.length === 0) {
       return allProjects
@@ -120,7 +108,7 @@ export default function PortfolioClient({
 
     // OR filter: show projects that have at least one of the selected technologies
     return allProjects.filter((project) =>
-      selectedTechnologies.some((tech) => project.technologies.includes(tech))
+      selectedTechnologies.some((tech) => project.technologies?.includes(tech))
     )
   }, [portfolioData, selectedTechnologies, activeSection])
 
@@ -160,6 +148,7 @@ export default function PortfolioClient({
           { key: 'all' as const, label: dict.portfolio.allProjects },
           { key: 'professional' as const, label: dict.portfolio.professional },
           { key: 'personal' as const, label: dict.portfolio.personal },
+          { key: 'teaching' as const, label: dict.portfolio.teaching },
         ].map((section) => (
           <button
             key={section.key}
@@ -265,48 +254,59 @@ export default function PortfolioClient({
                   </div>
 
                   {/* Period */}
-                  <div className="text-sm text-gray-500">
-                    <span className="font-medium">
-                      {dict.portfolio.period}:
-                    </span>{' '}
-                    {formatPeriod(project.period.start, project.period.end)}
-                  </div>
+                  {project.period && (
+                    <div className="text-sm text-gray-500">
+                      <span className="font-medium">
+                        {dict.portfolio.period}:
+                      </span>{' '}
+                      {formatPeriod(project.period.start, project.period.end)}
+                    </div>
+                  )}
 
                   {/* Description */}
                   <Article.Paragraph>
                     {project.description[lang]}
                   </Article.Paragraph>
 
-                  {/* Results */}
-                  <div>
-                    <h4 className="mb-1 text-sm font-semibold">
-                      {dict.portfolio.results}:
-                    </h4>
-                    <p className="text-sm text-gray-700 dark:text-gray-100">
-                      {project.results[lang]}
-                    </p>
-                  </div>
-
-                  {/* Technologies */}
-                  <div>
-                    <h4 className="mb-2 text-sm font-semibold">
-                      {dict.portfolio.technologies}:
-                    </h4>
-                    <div className="flex flex-wrap gap-1">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className={`rounded-full border px-2 py-1 text-xs ${
-                            selectedTechnologies.includes(tech)
-                              ? 'border-black bg-black text-white'
-                              : 'border-gray-200 bg-gray-100 text-gray-700'
-                          }`}
+                  {/* Links */}
+                  {project.links && (
+                    <div className="flex flex-wrap gap-3 text-sm">
+                      {project.links.map((link) => (
+                        <a
+                          key={link.url}
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-medium underline hover:text-gray-500"
                         >
-                          {tech}
-                        </span>
+                          {link.label} ↗
+                        </a>
                       ))}
                     </div>
-                  </div>
+                  )}
+
+                  {/* Technologies */}
+                  {project.technologies && (
+                    <div>
+                      <h4 className="mb-2 text-sm font-semibold">
+                        {dict.portfolio.technologies}:
+                      </h4>
+                      <div className="flex flex-wrap gap-1">
+                        {project.technologies.map((tech) => (
+                          <span
+                            key={tech}
+                            className={`rounded-full border px-2 py-1 text-xs ${
+                              selectedTechnologies.includes(tech)
+                                ? 'border-black bg-black text-white'
+                                : 'border-gray-200 bg-gray-100 text-gray-700'
+                            }`}
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </Article.Container>
             </motion.div>

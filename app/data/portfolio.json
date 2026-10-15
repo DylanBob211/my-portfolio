@@ -1,6 +1,83 @@
 {
   "professional": [
     {
+      "id": "forgedoc",
+      "period": {
+        "start": "2025-10",
+        "end": "2026-04"
+      },
+      "title": {
+        "it": "ForgeDoc – Generazione di documentazione con AI",
+        "en": "ForgeDoc – AI Documentation Generator"
+      },
+      "role": {
+        "it": "Full-stack developer",
+        "en": "Full-stack Developer"
+      },
+      "description": {
+        "it": "Applicazione AI on-premises per generare documentazione tecnica di progetti software. Ho sviluppato interfacce web e funzionalità applicative, integrato un chatbot basato su RAG e progettato un sistema di test e valutazione automatica della qualità degli output generati dall'AI.",
+        "en": "On-premises AI application that generates technical documentation for software projects. I built web interfaces and application features, integrated a RAG-based chatbot, and designed an automated testing and evaluation system to measure the quality of AI-generated output."
+      },
+      "technologies": [".NET", "C#", "Docker", "Ollama", "RAG"]
+    },
+    {
+      "id": "booking-platform",
+      "period": {
+        "start": "2025-04",
+        "end": "ongoing"
+      },
+      "title": {
+        "it": "Piattaforma di prenotazione",
+        "en": "Booking Platform"
+      },
+      "role": {
+        "it": "Full-stack developer e UX",
+        "en": "Full-stack Developer & UX"
+      },
+      "description": {
+        "it": "Sito pubblico di prenotazione e back-office amministrativo collegati a un backend REST. Ho progettato la UX e sviluppato entrambi, con attenzione all'accessibilità e a percorsi utente intuitivi.",
+        "en": "Public booking website and administrative back-office connected to a REST backend. I designed the UX and built both, with a focus on accessibility and intuitive user journeys."
+      },
+      "technologies": [
+        "Svelte",
+        "SvelteKit",
+        "TypeScript",
+        "Vitest",
+        "Playwright",
+        "Docker"
+      ]
+    },
+    {
+      "id": "jarvis-optical",
+      "period": {
+        "start": "2024-02",
+        "end": "ongoing"
+      },
+      "title": {
+        "it": "Applicazione per calcolo ottico – Cliente in ambito ottico",
+        "en": "Optical Parameter Calculation App – Optics Client"
+      },
+      "role": {
+        "it": "Product owner e full-stack developer",
+        "en": "Product Owner & Full-stack Developer"
+      },
+      "description": {
+        "it": "Applicazione per il calcolo di parametri ottici e la stampa di certificati. Ne ho preso in carico la gestione dopo l'uscita del team precedente: ho riscritto il front-end, risolto problemi critici del back-end e definito nuove funzionalità partendo da requisiti di alto livello, curando design della soluzione e UX. Il rapporto di fiducia con il cliente si è ricostruito e ha portato a nuovi investimenti.",
+        "en": "Application for calculating lens parameters and printing certificates. I took ownership after the previous team left: rewrote the front-end, fixed critical back-end issues and defined new features from high-level requirements, including solution design and UX. This rebuilt the client's trust and led to new investment in the product."
+      },
+      "technologies": [
+        "Angular",
+        "TypeScript",
+        "C#",
+        ".NET",
+        "Azure",
+        "Azure Functions",
+        "MongoDB",
+        "Git",
+        "Azure DevOps"
+      ]
+    },
+    {
       "id": "financial-conditions",
       "period": {
         "start": "2023-10",
@@ -18,78 +95,7 @@
         "it": "Applicazione interna per la gestione delle condizioni economiche dei prodotti finanziari in ambito bancario. Ho sviluppato elementi fondamentali dell'interfaccia, guidato le scelte tecniche e strategiche, gestito colleghi e interagito con manager e stakeholder. Ho curato l'onboarding di diversi junior.",
         "en": "Internal application for managing the financial conditions of banking products. I developed core UI components, led strategic and technical decisions, managed colleagues, and liaised with managers and stakeholders. I also handled onboarding for several junior developers."
       },
-      "results": {
-        "it": "13 rilasci in produzione in 3 anni, pochissimi bug, codice pulito e mantenibile, alta produttività e continuo miglioramento del tooling.",
-        "en": "13 production releases in 3 years, minimal bugs, clean and maintainable codebase, high productivity, and continuous tooling improvements."
-      },
       "technologies": ["Angular", "TypeScript", "Git", "Bitbucket"]
-    },
-    {
-      "id": "lole-dashboard",
-      "period": {
-        "start": "2024-06",
-        "end": "ongoing"
-      },
-      "title": {
-        "it": "Dashboard per servizi sociali – Organizzazione no profit",
-        "en": "Dashboard for Social Services – Non-profit Organization"
-      },
-      "role": {
-        "it": "Full-stack developer",
-        "en": "Full-stack Developer"
-      },
-      "description": {
-        "it": "Applicazione dashboard accessibile per il coordinamento dei servizi sociali. Ho curato lo sviluppo full-stack da zero, gestito uno sviluppatore junior e gestito i rapporti con il cliente.",
-        "en": "Accessible dashboard application for coordinating social services. I led the full-stack development from scratch, managed a junior developer, and handled client communication."
-      },
-      "results": {
-        "it": "Proof of Concept stabile e accessibile, portato all'adozione di Next.js, ottenuti ulteriori investimenti dal cliente.",
-        "en": "Stable and accessible Proof of Concept, transition to Next.js, and additional client investment secured."
-      },
-      "technologies": [
-        "React",
-        "TypeScript",
-        "Next.js",
-        "tRPC",
-        "Node.js",
-        "Nest.js",
-        "MongoDB",
-        "Playwright",
-        "Git",
-        "Bitbucket"
-      ]
-    },
-    {
-      "id": "jarvis-optical",
-      "period": {
-        "start": "2024-02",
-        "end": "ongoing"
-      },
-      "title": {
-        "it": "Applicazione per calcolo ottico – Cliente in ambito ottico",
-        "en": "Optical Parameter Calculation App – Optics Client"
-      },
-      "role": {
-        "it": "Full-stack developer",
-        "en": "Full-stack Developer"
-      },
-      "description": {
-        "it": "Applicazione per calcolo parametri ottici. Subentrato dopo l'uscita del team precedente, ho riprogettato l'intero stack e ristabilito un rapporto di fiducia col cliente.",
-        "en": "Application for calculating optical parameters. Took over after the previous team left, redesigned the full stack, and re-established client trust."
-      },
-      "results": {
-        "it": "Ristabilito un rapporto di fiducia con il cliente e rilanciato il progetto con nuovi sviluppi.",
-        "en": "Re-established a relationship of trust with the client and relaunched the project with new developments."
-      },
-      "technologies": [
-        "Angular",
-        "C#",
-        ".NET",
-        "Azure Functions",
-        "MongoDB",
-        "Git",
-        "Azure DevOps"
-      ]
     },
     {
       "id": "statistical-data-viz",
@@ -108,10 +114,6 @@
       "description": {
         "it": "Applicazione pubblica per visualizzazione dati statistici. Subentrato in fase critica, ho completato il lavoro coordinando un team junior e adeguando il tooling.",
         "en": "Public web application for visualizing statistical data. Took over a troubled project, completed it successfully while coordinating a junior team and improving the development tooling."
-      },
-      "results": {
-        "it": "Progetto completato con successo, il cliente ha richiesto ulteriori sviluppi.",
-        "en": "Successfully delivered, leading to further client requests."
       },
       "technologies": [
         "React",
@@ -142,10 +144,6 @@
         "it": "Gestione linee di credito in ambito bancario. Ho lavorato alla manutenzione e al refactoring dell'applicazione, aggiornandola a una versione più recente di Angular.",
         "en": "Internal banking app for managing credit lines. Maintained and refactored the application, migrated it to a newer Angular version."
       },
-      "results": {
-        "it": "Sviluppi rapidi, nessun bug in produzione.",
-        "en": "Fast deliveries, no bugs in production."
-      },
       "technologies": ["Angular", "TypeScript", "SVN", "GitHub"]
     },
     {
@@ -165,10 +163,6 @@
       "description": {
         "it": "Template Angular per applicazioni web nel settore finanziario. Ho sviluppato e successivamente mantenuto l'applicazione basata su quel template.",
         "en": "Angular template for web apps in the financial sector, later used as the base for a production application."
-      },
-      "results": {
-        "it": "L'applicazione è andata in produzione senza bug.",
-        "en": "Production-ready with zero bugs."
       },
       "technologies": [
         "Angular",
@@ -194,12 +188,8 @@
         "en": "Front-end Developer"
       },
       "description": {
-        "it": "MVP per la gestione di dispositivi medici.",
-        "en": "MVP for managing medical devices."
-      },
-      "results": {
-        "it": "MVP completato e validato dal cliente, con richiesta di ulteriori sviluppi.",
-        "en": "Successfully validated MVP, leading to additional development phases."
+        "it": "MVP per la gestione di dispositivi medici, validato dal cliente e seguito da ulteriori fasi di sviluppo.",
+        "en": "MVP for managing medical devices, validated by the client and followed by further development phases."
       },
       "technologies": [
         "Angular",
@@ -230,10 +220,6 @@
         "it": "Parco applicativo in ambito assicurativo. Ho sviluppato nuove funzionalità, effettuato refactoring e aggiornato costantemente le versioni Angular.",
         "en": "Wide application suite for insurance operations. Developed new features, performed refactoring, and kept Angular versions up-to-date."
       },
-      "results": {
-        "it": "Maggiore produttività e performance, migliorata la qualità del codice.",
-        "en": "Boosted productivity and performance, improved code quality."
-      },
       "technologies": [
         "Angular",
         "TypeScript",
@@ -262,10 +248,6 @@
         "it": "Bugfixing e piccole evolutive su applicazione React.",
         "en": "Bug fixing and minor feature development on a React-based application."
       },
-      "results": {
-        "it": "Risoluzione problemi rapida senza ulteriore impegno di risorse.",
-        "en": "Timely problem resolution with minimal resources."
-      },
       "technologies": ["React", "Git", "TFS"]
     },
     {
@@ -286,10 +268,6 @@
         "it": "Sviluppo di funzionalità frontend per l'Internet Banking.",
         "en": "Front-end development for an internet banking platform."
       },
-      "results": {
-        "it": "Applicazione in produzione.",
-        "en": "Application went live in production."
-      },
       "technologies": ["Angular", "TypeScript", "Git", "Bitbucket"]
     },
     {
@@ -307,17 +285,75 @@
         "en": "Junior Front-end Developer"
       },
       "description": {
-        "it": "Sviluppo di libreria componenti e interfaccia frontend su progetto greenfield.",
-        "en": "Development of a component library and front-end for a greenfield banking application."
-      },
-      "results": {
-        "it": "Applicazione utilizzata in produzione, componenti riusati da altri team.",
-        "en": "Used in production, components reused across other teams."
+        "it": "Sviluppo di libreria componenti e interfaccia frontend su progetto greenfield, in produzione e con componenti riusati da altri team.",
+        "en": "Development of a component library and front-end for a greenfield banking application, used in production and reused across other teams."
       },
       "technologies": ["Angular", "TypeScript"]
     }
   ],
   "personal": [
+    {
+      "id": "mass-hallucination",
+      "period": {
+        "start": "2026-08",
+        "end": "ongoing"
+      },
+      "title": {
+        "it": "mass-hallucination – Playground AI per live coding",
+        "en": "mass-hallucination – AI Live-coding Playground"
+      },
+      "role": {
+        "it": "Sviluppatore",
+        "en": "Developer"
+      },
+      "description": {
+        "it": "Playground nel browser con un editor di musica e grafica in cui un agente AI scrive codice Strudel e Hydra insieme a te. Un'esplorazione di interfacce creative collaborative tra persone e agenti.",
+        "en": "Browser-based playground with a music and graphics editor where an AI agent writes Strudel and Hydra code alongside you. An exploration of collaborative human–agent creative interfaces."
+      },
+      "technologies": ["Svelte", "Effect", "Strudel", "Hydra"],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/DylanBob211/mass-hallucination"
+        }
+      ]
+    },
+    {
+      "id": "rag-lab",
+      "period": {
+        "start": "2026-04",
+        "end": "2026-08"
+      },
+      "title": {
+        "it": "rag-lab – Pipeline RAG event-driven su Azure",
+        "en": "rag-lab – Event-driven RAG Pipeline on Azure"
+      },
+      "role": {
+        "it": "Sviluppatore",
+        "en": "Developer"
+      },
+      "description": {
+        "it": "Pipeline deployabile in cui gli eventi di Blob Storage attivano Azure Functions che suddividono i documenti e ne calcolano gli embedding su Cosmos DB, con API di ricerca vettoriale su Container Apps. Include retry, idempotenza, dead-letter queue, monitoraggio con Application Insights e script Python/Bash per provisioning e deploy. Prototipo focalizzato sull'infrastruttura.",
+        "en": "Deployable pipeline where Blob Storage events trigger Azure Functions that chunk and embed documents into Cosmos DB, with vector-search APIs hosted on Container Apps. Includes retries, idempotency, dead-letter queues, Application Insights monitoring and Python/Bash scripts for provisioning and deployment. An infrastructure-focused prototype."
+      },
+      "technologies": [
+        "Azure Functions",
+        "Blob Storage",
+        "Cosmos DB",
+        "Container Apps",
+        "Service Bus",
+        "Application Insights",
+        "Python",
+        "Bash",
+        "RAG"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/DylanBob211/rag-lab"
+        }
+      ]
+    },
     {
       "id": "nicoladoronzo-xyz",
       "period": {
@@ -336,10 +372,6 @@
         "it": "Sviluppo del mio sito personale.",
         "en": "My personal website."
       },
-      "results": {
-        "it": "In corso, obiettivo: migliorare la SEO e posizionamento.",
-        "en": "Ongoing project with goals focused on SEO and ranking improvements."
-      },
       "technologies": ["React", "Next.js", "TypeScript", "Git", "GitHub"]
     },
     {
@@ -357,12 +389,8 @@
         "en": "Full-stack Developer"
       },
       "description": {
-        "it": "Applicazione per la gestione di un gruppo di acquisto solidale locale.",
-        "en": "Application for managing a local solidarity purchasing group."
-      },
-      "results": {
-        "it": "In uso, ha ridotto errori umani e semplificato la gestione degli ordini.",
-        "en": "Actively used, reduces human error and simplifies order management."
+        "it": "Applicazione per la gestione di un gruppo di acquisto solidale locale, in uso per semplificare gli ordini e ridurre gli errori manuali.",
+        "en": "Application for managing a local solidarity purchasing group, in active use to simplify ordering and reduce manual errors."
       },
       "technologies": [
         "React",
@@ -394,10 +422,6 @@
         "it": "Applicazione per la gestione delle spese e incassi, con categorizzazione automatica.",
         "en": "App to track expenses and income, with automatic categorization."
       },
-      "results": {
-        "it": "Ottima esperienza nell'apprendimento della programmazione funzionale e strutture dati complesse.",
-        "en": "Gained strong experience in functional programming and complex data structures."
-      },
       "technologies": ["Elm"]
     },
     {
@@ -418,11 +442,50 @@
         "it": "Strumento per visualizzare le dipendenze di un progetto JS come un meraviglioso albero tridimensionale.",
         "en": "Tool that visualizes a JS project's dependencies as a wonderful 3D tree."
       },
-      "results": {
-        "it": "Esperienza formativa nella grafica 3D con JavaScript.",
-        "en": "Solid learning experience in 3D graphics with JavaScript."
-      },
       "technologies": ["JavaScript", "Three.js", "Node.js", "Express"]
+    }
+  ],
+  "teaching": [
+    {
+      "id": "web-lab-lecturer",
+      "period": {
+        "start": "2025-10",
+        "end": "ongoing"
+      },
+      "title": {
+        "it": "Laboratorio di Web III – Università degli Studi di Perugia",
+        "en": "Web III Lab – University of Perugia"
+      },
+      "role": {
+        "it": "Docente di laboratorio",
+        "en": "Lab Lecturer"
+      },
+      "description": {
+        "it": "Corso di laboratorio di 40 ore per studenti del terzo anno di Informatica: JavaScript, funzionamento del browser, tooling Node.js e Angular, con attività pratiche e valutazione degli esami finali.",
+        "en": "40-hour lab course for third-year Computer Science students covering JavaScript, browser internals, Node.js tooling and Angular, with hands-on activities and final exam grading."
+      },
+      "technologies": ["JavaScript", "Node.js", "Angular"]
+    },
+    {
+      "id": "azure-ai-certification",
+      "title": {
+        "it": "Microsoft Certified: Azure AI Cloud Developer Associate",
+        "en": "Microsoft Certified: Azure AI Cloud Developer Associate"
+      },
+      "role": {
+        "it": "Certificazione",
+        "en": "Certification"
+      },
+      "description": {
+        "it": "Certificazione Microsoft sullo sviluppo di soluzioni AI su Azure.",
+        "en": "Microsoft certification on building AI solutions on Azure."
+      },
+      "links": [
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/users/nicoladoronzo-2693/credentials/3f1903dffb31cbff"
+        }
+      ]
     }
   ]
 }

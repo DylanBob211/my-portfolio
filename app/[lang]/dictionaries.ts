@@ -50,10 +50,10 @@ export type Dictionary = {
     allProjects: string
     professional: string
     personal: string
+    teaching: string
     technologies: string
     role: string
     period: string
-    results: string
     ongoing: string
     showMoreTechnologies: string
     showLessTechnologies: string
