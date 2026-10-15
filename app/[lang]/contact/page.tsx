@@ -2,8 +2,13 @@ import { Metadata } from 'next'
 import { getDictionary } from '../dictionaries'
 import { ContactForm } from './contact-form'
 
-export const metadata: Metadata = {
-  title: 'Contact',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+  const dict = await getDictionary((await params).lang)
+  return { title: dict.nav.contact }
 }
 
 export default async function Contact({

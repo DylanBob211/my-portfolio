@@ -14,7 +14,10 @@ export default async function Home({
     <div className="w-3/5 sm:w-2/5 lg:w-1/5">
       <p className="text-balance">{dict.homepage.introduction}</p>
       <div className="mt-4">
-        <Link href="/services" className="cursor-pointer">
+        <Link
+          href={`/${resolvedParams.lang}/services`}
+          className="cursor-pointer"
+        >
           <FancyButton>{dict.homepage.cta}</FancyButton>
         </Link>
       </div>

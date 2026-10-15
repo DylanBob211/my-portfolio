@@ -9,8 +9,13 @@ import { SiAngular } from 'react-icons/si'
 import { Article } from '../../ui/article'
 import { getDictionary } from '../dictionaries'
 
-export const metadata: Metadata = {
-  title: 'Services',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+  const dict = await getDictionary((await params).lang)
+  return { title: dict.nav.services }
 }
 
 export default async function Services({
@@ -18,7 +23,8 @@ export default async function Services({
 }: {
   params: Promise<{ lang: string }>
 }) {
-  const dict = await getDictionary((await params).lang)
+  const { lang } = await params
+  const dict = await getDictionary(lang)
 
   return (
     <div className="sm:w-2/5">
@@ -54,7 +60,7 @@ export default async function Services({
       </Article.Container>
 
       <div className="mt-4">
-        <Link href="/contact" className="cursor-pointer font-bold">
+        <Link href={`/${lang}/contact`} className="cursor-pointer font-bold">
           <FancyButton>{dict.services.cta}</FancyButton>
         </Link>
       </div>

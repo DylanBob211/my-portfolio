@@ -3,8 +3,13 @@ import { asLocale, getDictionary } from '../dictionaries'
 import PortfolioClient from './portfolio-client'
 import portfolioData from '../../data/portfolio.json'
 
-export const metadata: Metadata = {
-  title: 'Portfolio',
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+  const dict = await getDictionary((await params).lang)
+  return { title: dict.nav.portfolio }
 }
 
 export default async function Portfolio({
